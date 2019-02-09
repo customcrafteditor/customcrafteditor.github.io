@@ -1,0 +1,28 @@
+---
+---
+#welcome-text {
+      text-align: center;
+      font-size: 36px;
+      font-family: 'Days One', sans-serif;
+}
+
+#background-video {
+      position: fixed;
+      top: -20%;
+      right: 20%;
+      min-width: 100%;
+      min-height: 100%;
+      width: 140%;
+      height: auto;
+      z-index: -1000;
+      overflow: hidden;
+      filter: blur(20px);
+      -webkit-filter: blur(20px);
+      -moz-filter: blur(20px);
+      -o-filter: blur(20px);
+      -ms-filter: blur(20px);
+      bottom: 20%;
+      left: -20%;
+      align-content: center;
+      margin: 0 0 0 0;
+}

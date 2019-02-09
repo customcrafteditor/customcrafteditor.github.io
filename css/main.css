@@ -1,0 +1,27 @@
+---
+---
+@import url('{{ site.baseurl }}/fonts/days-one.css');
+
+html {
+      background-color: rgb(22, 22, 22);
+      background-image: linear-gradient(to top right,rgb(8,8,8),rgb(13, 13, 13));
+      color: white;
+}
+
+body {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+}
+
+#navbar {
+      width: 100%;
+      height:  50px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      margin: 0px;
+      margin-bottom: 10px;
+      padding: 0px;
+}
