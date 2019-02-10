@@ -1,18 +1,19 @@
 ---
+og_title: "Editor v.1.5.001"
+og_type: "website"
+og_url: "/editor/1.5.001"
+og_description: "An editor for Custom Craft 2 version 1.5"
 ---
 <html>
       <head>
             <title>CustomCraft - Editor v.1.5.001</title>
             <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
             <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/1.5.001.css">
-            <meta property="og:title" content="Editor v.1.5.001" />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://{{ site.url }}{{ site.baseurl }}/editor/1.5.001.html" />
-            <meta property="og:description" content="An editor for Custom Craft 2 version 1.5" />
-            <meta property="og:site_name" content="CustomCraftEditor" />
-            <meta property="og:locale" content="en_US" />
+            {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
+            {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
             <script src="{{ site.baseurl }}/scripts/1.5.001.js"></script>
             <script src="{{ site.baseurl }}/editor/1.5.001.js"></script>
+            <script src="{{ site.baseurl }}/scripts/main.js"></script>
             <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
             <script>
                   window.TrackJS && TrackJS.install({ 
@@ -143,6 +144,7 @@
             </style>
       </head>
       <body>
+            {% include navbar.html %}
             <template id="ingredient-list-template">
                   <div class="ingredient-list-entry">
                         <input type="text" class="ingredient-list-id" placeholder="ID" list="item-ids-list"></input>
@@ -225,7 +227,6 @@
                         <button class="custombiofuels-clist-remove">Remove</button>
                   </div>
             </template>
-            <object id="navbar" type="text/html" data="{{ site.baseurl }}/html/navbar.html"></object>
             <div id="output-mode">Output</div>
             <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea>
             <div class="button-section-round" style="display: inline;"><!--

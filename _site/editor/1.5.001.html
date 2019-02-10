@@ -3,14 +3,16 @@
             <title>CustomCraft - Editor v.1.5.001</title>
             <link rel="stylesheet" type="text/css" href="/css/main.css">
             <link rel="stylesheet" type="text/css" href="/css/1.5.001.css">
+            
             <meta property="og:title" content="Editor v.1.5.001" />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://http://localhost:4000/editor/1.5.001.html" />
-            <meta property="og:description" content="An editor for Custom Craft 2 version 1.5" />
-            <meta property="og:site_name" content="CustomCraftEditor" />
-            <meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000/editor/1.5.001" />
+<meta property="og:description" content="An editor for Custom Craft 2 version 1.5" />
+<meta property="og:site_name" content="CustomCraftEditor" />
+<meta property="og:locale" content="en_US" />
             <script src="/scripts/1.5.001.js"></script>
             <script src="/editor/1.5.001.js"></script>
+            <script src="/scripts/main.js"></script>
             <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
             <script>
                   window.TrackJS && TrackJS.install({ 
@@ -141,6 +143,15 @@
             </style>
       </head>
       <body>
+            <link rel="stylesheet" href="/css/navbar.css">
+<div id="navbar-div"><!--
+--><a id="navbar-title" href="/" target="_top"><span id="navbar-title-l">Custom</span><span id="navbar-title-r">Craft</span></a><!--
+--><nav id="navbar-links"><!--
+      --><a id="navbar-editor" href="/editor/" target="_top">Editor</a><!--
+      --><div class="navbar-sep"></div><!--
+      --><a id="navbar-editorlist" href="/editor/list" target="_top">List</a><!--
+--></nav><!--
+--></div>
             <template id="ingredient-list-template">
                   <div class="ingredient-list-entry">
                         <input type="text" class="ingredient-list-id" placeholder="ID" list="item-ids-list"></input>
@@ -223,7 +234,6 @@
                         <button class="custombiofuels-clist-remove">Remove</button>
                   </div>
             </template>
-            <object id="navbar" type="text/html" data="/html/navbar.html"></object>
             <div id="output-mode">Output</div>
             <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea>
             <div class="button-section-round" style="display: inline;"><!--
