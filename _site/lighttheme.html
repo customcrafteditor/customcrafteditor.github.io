@@ -28,12 +28,18 @@
       </script>
       <script>
             window.onload = function () {
-                  updateTheme();
                   document.getElementById("switcher-theme").checked = isLightTheme();
                   document.getElementById("switcher-theme").onchange = function() {
                         setLightTheme(this.checked);
                         updateTheme();
                   };
+                  updateTheme();
+                  window.addEventListener("storage", function(e) {
+                        if (e.key === "lightTheme") {
+                              updateTheme();
+                              document.getElementById("switcher-theme").checked = isLightTheme();
+                        }
+                  });
             };
       </script>
 </head>

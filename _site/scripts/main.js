@@ -1,5 +1,10 @@
 window.onload = function() {
       updateTheme();
+      window.addEventListener("storage", function(e) {
+            if (e.key === "lightTheme") {
+                  updateTheme();
+            }
+      });
 }
 
 function getStylesheets() {
@@ -104,8 +109,9 @@ function getCookie(cname) {
 }
 
 function isLightTheme() {
-      var _light = getCookie("lightTheme");
-      if (_light != "") {
+      //var _light = getCookie("lightTheme");
+      var _light = localStorage.getItem("lightTheme");
+      if (_light != null && _light != "") {
             if (_light == true || _light == "true") {
                   return true;
             }
@@ -115,7 +121,8 @@ function isLightTheme() {
 }
 
 function setLightTheme(light) {
-      setCookie("lightTheme",light,365);
+      //setCookie("lightTheme",light,365);
+      localStorage.setItem("lightTheme",light);
 }
 
 function updateTheme() {
