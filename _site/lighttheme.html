@@ -3,8 +3,12 @@
 <head>
       <title>CustomCraft - Light Theme</title>
       <link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/main-dark.css" class="theme-dark">
+<link rel="stylesheet" type="text/css" href="/css/main-light.css" class="theme-light">
+<link rel="stylesheet" type="text/css" href="/css/main-ruby.css" class="theme-ruby">
 <link rel="stylesheet" type="text/css" href="/css/slider.css">
-      <link rel="stylesheet" type="text/css" href="/css/1.5.001.css">
+<link rel="stylesheet" type="text/css" href="/css/slider-dark.css" class="theme-dark">
+<link rel="stylesheet" type="text/css" href="/css/slider-light.css" class="theme-light">
       
       <meta property="og:title" content="Change to light Theme" />
 <meta property="og:type" content="website" />
@@ -12,10 +16,8 @@
 <meta property="og:description" content="Change your theme to light." />
 <meta property="og:site_name" content="CustomCraftEditor" />
 <meta property="og:locale" content="en_US" />
-      <script src="/scripts/1.5.001.js"></script>
-      <script src="/editor/1.5.001.js"></script>
       <script src="/scripts/main.js"></script>
-      <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+      <!--<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
       <script>
             window.TrackJS && TrackJS.install({
                   token: "e26750c4a6054763ae196f2a8db5a376",
@@ -25,35 +27,47 @@
             TrackJS.addMetadata("version", "1.5.001");
             TrackJS.addMetadata("ccversion", "1.5");
             TrackJS.addMetadata("eversion", "001");
-      </script>
+      </script>-->
       <script>
-            window.onload = function () {
+            window.addEventListener('windowloaded', function () {
                   document.getElementById("switcher-theme").checked = isLightTheme();
-                  document.getElementById("switcher-theme").onchange = function() {
-                        setLightTheme(this.checked);
-                        updateTheme();
+                  document.getElementById("switcher-theme").onchange = function () {
+                        if (isLightTheme() != this.checked) {
+                              setLightTheme(this.checked);
+                        }
                   };
-                  updateTheme();
+                  window.addEventListener("themechanged", function(e) {
+                        updateTheme();
+                  });
                   window.addEventListener("storage", function(e) {
-                        if (e.key === "lightTheme") {
-                              updateTheme();
-                              document.getElementById("switcher-theme").checked = isLightTheme();
+                        if (e.key === "theme") {
+                              dispatchThemeChangedEvent();
                         }
                   });
-            };
+                  window.addEventListener('themeupdated', function () {
+                        document.getElementById("switcher-theme").checked = isLightTheme();
+                  });
+                  updateTheme();
+            });
       </script>
 </head>
 
 <body>
       <link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/navbar-dark.css" class="theme-dark">
+<link rel="stylesheet" href="/css/navbar-light.css" class="theme-light">
+<link rel="stylesheet" href="/css/navbar-ruby.css" class="theme-ruby">
 <div id="navbar-div"><!--
 --><a id="navbar-title" href="/" target="_top"><span id="navbar-title-l">Custom</span><span id="navbar-title-r">Craft</span></a><!--
 --><nav id="navbar-links"><!--
       --><a id="navbar-editor" href="/editor/" target="_top">Editor</a><!--
       --><div class="navbar-sep"></div><!--
-      --><a id="navbar-editorlist" href="/editor/list" target="_top">List</a><!--
+      --><a id="navbar-editorlist" href="/editor/list" target="_top">Other versions</a><!--
 --></nav><!--
 --></div>
+      <div class="disclaimer-design-header">YOU ARE ENTERING THE DANGER ZONE</div><br>
+      <div class="disclaimer-design-text">Flip this switch at your own risk! I will not be responsible for any harm the light-theme created!</div>
+      <br>
       <div style="text-align: center">
             <label class="switch">
                   <input id="switcher-theme" type="checkbox">

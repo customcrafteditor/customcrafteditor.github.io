@@ -1,6 +1,6 @@
 ---
 ---
-window.onload = function() {
+window.addEventListener('windowloaded', function () {
       document.getElementById("copy-output").onclick = copy_output;
       document.getElementById("editor-reset").onclick = resetValues;
       document.getElementById("load-input").onclick = loadInput;
@@ -23,11 +23,12 @@ window.onload = function() {
       document.getElementById("editor-customsize-add-confirm").onclick = new_customsize;
       document.getElementById("editor-custombiofuels-add-confirm").onclick = new_custombiofuel;
 
+
       change_mode(0);
       update_input_visibility();
       update_change_visibility();
       outputData();
-}
+});
 
 function outputData() {
       var outp = document.getElementById("code-output");

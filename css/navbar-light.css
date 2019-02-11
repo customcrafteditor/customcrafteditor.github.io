@@ -1,0 +1,26 @@
+---
+---
+#navbar-div {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+}
+
+#navbar-title {
+      color: rgb(0, 0, 0);
+}
+
+#navbar-title-l {
+      color: #ff9900;
+}
+
+#navbar-title-r {
+      color: #006eff;
+}
+
+#navbar-links a {
+      color: rgb(0, 0, 0);
+}
+
+.navbar-sep {
+      border-color: black;
+}

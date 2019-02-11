@@ -1,5 +1,5 @@
 #code-output {
-      font-family: Arial;
+      font-family: 'Days One', sans-serif;
       border-color: white;
       background-color: black;
       color: white;
@@ -10,10 +10,17 @@
       tab-size: 4;
       -moz-tab-size: 4;
       -o-tab-size: 4;
+}
+
+.editor-marginner {
+      padding: 0;
+      margin: 0;
+      margin-left: 10px;
+      margin-right: 10px;
 }
 
 #code-input {
-      font-family: Arial;
+      font-family: 'Days One', sans-serif;
       border-color: white;
       background-color: black;
       color: white;
@@ -26,10 +33,13 @@
       -o-tab-size: 4;
 }
 
-.button-section-round {
-      height: 20px;
-      overflow: hidden;
+.button-section {
       display: inline-block;
+      background-color: black;
+      border-width: 1px;
+      border-color: white;
+      border-radius: 0;
+      border-style: solid;
 }
 
 /*
@@ -48,7 +58,7 @@
 }
 */
 
-.button-section-round .button-section-divider {
+.button-section .button-section-divider {
       margin: 0px;
       margin-left: 0px;
       margin-right: 0px;
@@ -64,10 +74,10 @@
       color: cyan;
 }
 
-.button-section-round button {
-      display: inline;
+.button-section button {
+      display: inline-block;
       border: none;
-      height: 18px;
+      height: 40px;
       margin: 0px;
       padding: 0px;
       padding-left: 12px;
@@ -75,13 +85,15 @@
       padding-top: 0px;
       padding-bottom: 0px;
       vertical-align: middle;
-      background-color: black;
+      background-color: transparent;
+      font-family: 'Days One', sans-serif;
+      font-size: 16px;
       color: white;
       transition: background-color 0.25s ease-in-out;
       transition: color 0.25s ease-in-out;
 }
 
-.button-section-round button:hover {
+.button-section button:hover {
       background-color: white;
       color: black;
 }

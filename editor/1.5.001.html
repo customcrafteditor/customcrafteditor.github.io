@@ -7,14 +7,14 @@ og_description: "An editor for Custom Craft 2 version 1.5"
 <html>
       <head>
             <title>CustomCraft - Editor v.1.5.001</title>
-            <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
+            {% include main-csslist.html %}
             <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/1.5.001.css">
             {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
             {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
             <script src="{{ site.baseurl }}/scripts/1.5.001.js"></script>
             <script src="{{ site.baseurl }}/editor/1.5.001.js"></script>
             <script src="{{ site.baseurl }}/scripts/main.js"></script>
-            <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+            <!--<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
             <script>
                   window.TrackJS && TrackJS.install({ 
                         token: "e26750c4a6054763ae196f2a8db5a376",
@@ -24,7 +24,7 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                   TrackJS.addMetadata("version", "1.5.001");
                   TrackJS.addMetadata("ccversion", "1.5");
                   TrackJS.addMetadata("eversion", "001");
-            </script>
+            </script>-->
             <style>
                   #editor-recipe-ingredient-list {
                         min-height: 150px;
@@ -227,112 +227,109 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                         <button class="custombiofuels-clist-remove">Remove</button>
                   </div>
             </template>
-            <div id="output-mode">Output</div>
-            <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea>
-            <div class="button-section-round" style="display: inline;"><!--
-                  --><button id="help-me" class="button-section-wrap-l">Help (Not implemented)</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="copy-output">Copy output</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="editor-reset" class="button-section-wrap-r">Reset</button><!--
-            --></div>
-            <div style="display: inline-flex; width: 20px"></div>
-            <div class="button-section-round" style="display: inline;"><!--
-                  --><button id="editor-change-toggle">Toggle between Add and Edit</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="editor-input-toggle">Toggle Input (Import / Load)</button><!--
-            --></div>
-            <div style="display: inline-flex; width: 20px"></div>
-            <div class="button-section-round" style="display: inline;"><!--
-                  --><button id="change-to-nothing" class="button-section-wrap-l">Unselect Mode</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="change-to-added">AddedRecipe</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="change-to-modified">ModifiedRecipe</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="change-to-alias">AliasRecipe</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="change-to-customtab">CustomCraftingTab</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="change-to-customsizes">CustomSizes</button><!--
-                  --><div class="button-section-divider"></div><!--
-                  --><button id="change-to-custombiofuels" class="button-section-wrap-r">CustomBioFuels</button><!--
-            --></div>
-            <br>
-            <br>
-            <div id="editor-input" hidden="hidden">
-                  <textarea id="code-input" placeholder="Input"></textarea>
-                  <button id="load-input">Load</button>
-                  <label>Loading erases all current data!</label>
+            <div class="editor-marginner">
+                  <div id="output-mode">Output</div>
+                  <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea><!--
+                  --><div style="text-align: center"><div class="button-section" style="border-top-width: 0px;width: 100%;"><!--
+                        --><button id="help-me" class="button-section-wrap-l">Help (Not implemented)</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="copy-output">Copy output</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="editor-reset" class="button-section-wrap-r">Reset</button><!--
+                        --><div style="display: inline-flex; width: 20px"></div><!--
+                        --><button id="editor-change-toggle">Toggle between Add and Edit</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="editor-input-toggle">Toggle Input (Import / Load)</button><!--
+                        --><br><!--
+                        --><button id="change-to-nothing" class="button-section-wrap-l">Unselect Mode</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-added">AddedRecipe</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-modified">ModifiedRecipe</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-alias">AliasRecipe</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-customtab">CustomCraftingTab</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-customsizes">CustomSizes</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-custombiofuels" class="button-section-wrap-r">CustomBioFuels</button><!--
+                  --></div></div>
                   <br>
-            </div>
-            <div id="editor-recipe" hidden="hidden">
-                  <div class="editor-add">
-                        <input id="editor-recipe-add-id" type="text" placeholder="ID" list="item-ids-list">
-                        <input id="editor-recipe-add-amount" type="number" min="-1" max="99" placeholder="Amount" value="0">
-                        <Label>Default ForceUnlock<input id="editor-recipe-add-forceunlock-default" type="checkbox" checked="checked"></Label>
-                        <Label>Unlocks at Start<input id="editor-recipe-add-forceunlock" type="checkbox" checked="checked"></Label>
-                        <input id="editor-recipe-add-path" type="text" placeholder="Path" list="craftingtabs-ids-list">
-                        <input id="editor-recipe-add-display" type="text" placeholder="Display Name">
-                        <input id="editor-recipe-add-tooltip" type="text" placeholder="Tooltip">
-                        <button id="editor-recipe-add-confirm">Add a recipe</button>
+                  <br>
+                  <div id="editor-input" hidden="hidden">
+                        <textarea id="code-input" placeholder="Input"></textarea>
+                        <button id="load-input">Load</button>
+                        <label>Loading erases all current data!</label>
                         <br>
-                        <input id="editor-recipe-add-ingredient-id" type="text" placeholder="Ingredient ID" list="item-ids-list">
-                        <input id="editor-recipe-add-ingredient-amount" type="number" min="-1" max="99" placeholder="Ingredient Amount" value="1">
-                        <button id="editor-recipe-add-ingredient-confirm">Add Ingredient</button>
-                        <div id="editor-recipe-ingredient-list">
+                  </div>
+                  <div id="editor-recipe" hidden="hidden">
+                        <div class="editor-add">
+                              <input id="editor-recipe-add-id" type="text" placeholder="ID" list="item-ids-list">
+                              <input id="editor-recipe-add-amount" type="number" min="-1" max="99" placeholder="Amount" value="0">
+                              <Label>Default ForceUnlock<input id="editor-recipe-add-forceunlock-default" type="checkbox" checked="checked"></Label>
+                              <Label>Unlocks at Start<input id="editor-recipe-add-forceunlock" type="checkbox" checked="checked"></Label>
+                              <input id="editor-recipe-add-path" type="text" placeholder="Path" list="craftingtabs-ids-list">
+                              <input id="editor-recipe-add-display" type="text" placeholder="Display Name">
+                              <input id="editor-recipe-add-tooltip" type="text" placeholder="Tooltip">
+                              <button id="editor-recipe-add-confirm">Add a recipe</button>
+                              <br>
+                              <input id="editor-recipe-add-ingredient-id" type="text" placeholder="Ingredient ID" list="item-ids-list">
+                              <input id="editor-recipe-add-ingredient-amount" type="number" min="-1" max="99" placeholder="Ingredient Amount" value="1">
+                              <button id="editor-recipe-add-ingredient-confirm">Add Ingredient</button>
+                              <div id="editor-recipe-ingredient-list">
+                              </div>
+                              <input id="editor-recipe-add-linked-id" type="text" placeholder="Linked ID" list="item-ids-list">
+                              <button id="editor-recipe-add-linked-confirm">Add Linked</button>
+                              <div id="editor-recipe-linked-list">
+                              </div>
+                              <input id="editor-recipe-add-unlock-id" type="text" placeholder="Unlock ID" list="item-ids-list">
+                              <button id="editor-recipe-add-unlock-confirm">Add Unlock</button>
+                              <div id="editor-recipe-unlock-list">
+                              </div>
                         </div>
-                        <input id="editor-recipe-add-linked-id" type="text" placeholder="Linked ID" list="item-ids-list">
-                        <button id="editor-recipe-add-linked-confirm">Add Linked</button>
-                        <div id="editor-recipe-linked-list">
-                        </div>
-                        <input id="editor-recipe-add-unlock-id" type="text" placeholder="Unlock ID" list="item-ids-list">
-                        <button id="editor-recipe-add-unlock-confirm">Add Unlock</button>
-                        <div id="editor-recipe-unlock-list">
+                        <div class="editor-change">
+                              <div id="editor-recipe-citems-list">
+                              </div>
                         </div>
                   </div>
-                  <div class="editor-change">
-                        <div id="editor-recipe-citems-list">
+                  <div id="editor-customtab" hidden="hidden">
+                        <div class="editor-add">
+                              <input id="editor-customtab-add-id" type="text" placeholder="ID">
+                              <input id="editor-customtab-add-display" type="text" placeholder="Display Name">
+                              <input id="editor-customtab-add-spriteitemid" type="text" placeholder="Sprite ItemID" list="item-ids-list">
+                              <input id="editor-customtab-add-parentpath" type="text" placeholder="Parent Path" list="craftingtabs-ids-list">
+                              <button id="editor-customtab-add-confirm">Add a Tab</button>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-customtab-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-customsize" hidden="hidden">
+                        <div class="editor-add">
+                              <input id="editor-customsize-add-id" type="text" placeholder="ID" list="item-ids-list">
+                              <input id="editor-customsize-add-width" type="number" min="1" max="99" value="1" placeholder="Width">
+                              <input id="editor-customsize-add-height" type="number" min="1" max="99" value="1" placeholder="Height">
+                              <button id="editor-customsize-add-confirm">Add a Size</button>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-customsize-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-custombiofuels" hidden="hidden">
+                        <div class="editor-add">
+                              <input id="editor-custombiofuels-add-id" type="text" placeholder="ID" list="item-ids-list">
+                              <input id="editor-custombiofuels-add-fuel" type="number" min="0" value="0" placeholder="Energy">
+                              <button id="editor-custombiofuels-add-confirm">Add a BioFuel</button>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-custombiofuels-citems-list">
+                              </div>
                         </div>
                   </div>
             </div>
-            <div id="editor-customtab" hidden="hidden">
-                  <div class="editor-add">
-                        <input id="editor-customtab-add-id" type="text" placeholder="ID">
-                        <input id="editor-customtab-add-display" type="text" placeholder="Display Name">
-                        <input id="editor-customtab-add-spriteitemid" type="text" placeholder="Sprite ItemID" list="item-ids-list">
-                        <input id="editor-customtab-add-parentpath" type="text" placeholder="Parent Path" list="craftingtabs-ids-list">
-                        <button id="editor-customtab-add-confirm">Add a Tab</button>
-                  </div>
-                  <div class="editor-change">
-                        <div id="editor-customtab-citems-list">
-                        </div>
-                  </div>
-            </div>
-            <div id="editor-customsize" hidden="hidden">
-                  <div class="editor-add">
-                        <input id="editor-customsize-add-id" type="text" placeholder="ID" list="item-ids-list">
-                        <input id="editor-customsize-add-width" type="number" min="1" max="99" value="1" placeholder="Width">
-                        <input id="editor-customsize-add-height" type="number" min="1" max="99" value="1" placeholder="Height">
-                        <button id="editor-customsize-add-confirm">Add a Size</button>
-                  </div>
-                  <div class="editor-change">
-                        <div id="editor-customsize-citems-list">
-                        </div>
-                  </div>
-            </div>
-            <div id="editor-custombiofuels" hidden="hidden">
-                  <div class="editor-add">
-                        <input id="editor-custombiofuels-add-id" type="text" placeholder="ID" list="item-ids-list">
-                        <input id="editor-custombiofuels-add-fuel" type="number" min="0" value="0" placeholder="Energy">
-                        <button id="editor-custombiofuels-add-confirm">Add a BioFuel</button>
-                  </div>
-                  <div class="editor-change">
-                        <div id="editor-custombiofuels-citems-list">
-                        </div>
-                  </div>
-            </div>
-
 
 
             <datalist id="item-ids-list">

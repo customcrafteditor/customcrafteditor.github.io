@@ -1,11 +1,15 @@
 window.onload = function() {
+      dispatchWindowLoadedEvent();
       updateTheme();
       window.addEventListener("storage", function(e) {
-            if (e.key === "lightTheme") {
-                  updateTheme();
+            if (e.key === "theme") {
+                  dispatchThemeChangedEvent();
             }
       });
-}
+      window.addEventListener("themechanged", function(e) {
+            updateTheme();
+      });
+};
 
 function getStylesheets() {
       return document.styleSheets;
@@ -52,9 +56,11 @@ function setStylesheetStyle(stylesheet,selector,property,newvalue) {
       }
 }
 
+/*
 function setStyle(selector,property,newvalue) {
-      for (var ii = 0; ii<document.styleSheets.length; ii++) {
-            var stylesheet = document.styleSheets[ii];
+      var sheets = document.styleSheets;
+      for (var ii = 0; ii<sheets.length; ii++) {
+            var stylesheet = sheets[ii];
             if (stylesheet != null && stylesheet != "") {
                   var cssObject;
                   if (stylesheet.cssRules != null) {
@@ -84,6 +90,7 @@ function setStyle(selector,property,newvalue) {
             }
       }
 }
+*/
 
 function setCookie(cname, cvalue, exdays) {
       var d = new Date();
@@ -110,9 +117,19 @@ function getCookie(cname) {
 
 function isLightTheme() {
       //var _light = getCookie("lightTheme");
+      /*
       var _light = localStorage.getItem("lightTheme");
       if (_light != null && _light != "") {
             if (_light == true || _light == "true") {
+                  return true;
+            }
+            return false;
+      }
+      return false;
+      */
+     var _theme = getTheme();
+      if (_theme != null && _theme != "") {
+            if (_theme.toLowerCase() == "light") {
                   return true;
             }
             return false;
@@ -122,38 +139,108 @@ function isLightTheme() {
 
 function setLightTheme(light) {
       //setCookie("lightTheme",light,365);
-      localStorage.setItem("lightTheme",light);
+      //localStorage.setItem("lightTheme",light);
+      if (light) {
+            setTheme("light");
+      } else {
+            setTheme("dark");
+      }
+}
+
+function getTheme() {
+      var _theme = localStorage.getItem("theme");
+      if (_theme != null && _theme != "") {
+            return _theme;
+      }
+      return "";
+}
+
+function setTheme(theme) {
+      localStorage.setItem("theme",theme);
+      dispatchThemeChangedEvent();
+}
+
+/*
+function dispatchThemeChangedEvent(light) {
+      var evt = new CustomEvent('themechanged', { light: light });
+      window.dispatchEvent(evt);
+}
+*/
+function dispatchThemeChangedEvent() {
+      var evt = new CustomEvent('themechanged', { light: getTheme() });
+      window.dispatchEvent(evt);
+}
+
+function dispatchThemeUpdateEvent() {
+      var evt = new CustomEvent('themeupdated', { xx: null });
+      window.dispatchEvent(evt);
+}
+
+function dispatchWindowLoadedEvent() {
+      var evt = new CustomEvent('windowloaded', { xx: null });
+      window.dispatchEvent(evt);
 }
 
 function updateTheme() {
       let root = document.documentElement;
-      if (isLightTheme()) {
+      var dark = document.getElementsByClassName("theme-dark");
+      var light = document.getElementsByClassName("theme-light");
+      var ruby = document.getElementsByClassName("theme-ruby");
+      var _theme = getTheme();
+      if (_theme == "light") {
+            /*
             root.style.setProperty('--background', "rgb(233,233,233)");
             root.style.setProperty('--background-img', "linear-gradient(to top right, rgb(242, 242, 242), rgb(247, 247, 247))");
             root.style.setProperty('--txt-color', "rgb(0,0,0)");
             setStyle("#navbar-div","backgroundColor","rgb(255,255,255)");
             setStyle("#navbar-links a","color","rgb(0,0,0)");
             setStyle(".navbar-sep","borderColor","rgb(0,0,0)");
-            setStyle(".slider","backgroundColor","rgb(200,200,200)");/*
-            setStyle(".slider::before","backgroundColor","#006eff");
-            setStyle("input:checked + .slider","backgroundColor","#ff9900");
-            setStyle("input:focus + .slider","boxShadow","#ff9900");*/
+            setStyle(".slider","backgroundColor","rgb(200,200,200)");
             setStyle(".slider::before","backgroundColor","#ff9900");
             setStyle("input:checked + .slider","backgroundColor","#006eff");
             setStyle("input:focus + .slider","boxShadow","#006eff");
+            */
+            for (var i = 0; i < dark.length; i++) {
+                  dark[i].disabled = true;
+            }
+            for (var i = 0; i < light.length; i++) {
+                  light[i].disabled = false;
+            }
+            for (var i = 0; i < ruby.length; i++) {
+                  ruby[i].disabled = true;
+            }
+      } else if (_theme == "ruby") {
+            for (var i = 0; i < dark.length; i++) {
+                  dark[i].disabled = true;
+            }
+            for (var i = 0; i < light.length; i++) {
+                  light[i].disabled = true;
+            }
+            for (var i = 0; i < ruby.length; i++) {
+                  ruby[i].disabled = false;
+            }
       } else {
+            /*
             root.style.setProperty('--background', "rgb(22,22,22)");
             root.style.setProperty('--background-img', "linear-gradient(to top right, rgb(8, 8, 8), rgb(13, 13, 13))");
             root.style.setProperty('--txt-color', "rgb(255,255,255)");
             setStyle("#navbar-div","backgroundColor","rgb(0,0,0)");
             setStyle("#navbar-links a","color","rgb(255,255,255)");
             setStyle(".navbar-sep","borderColor","rgb(255,255,255)");
-            setStyle(".slider","backgroundColor","rgb(55,55,55)");/*
-            setStyle(".slider::before","backgroundColor","#006eff");
-            setStyle("input:checked + .slider","backgroundColor","#ff9900");
-            setStyle("input:focus + .slider","boxShadow","#ff9900");*/
+            setStyle(".slider","backgroundColor","rgb(55,55,55)");
             setStyle(".slider::before","backgroundColor","#ff9900");
             setStyle("input:checked + .slider","backgroundColor","#006eff");
             setStyle("input:focus + .slider","boxShadow","#006eff");
+            */
+            for (var i = 0; i < dark.length; i++) {
+                  dark[i].disabled = false;
+            }
+            for (var i = 0; i < light.length; i++) {
+                  light[i].disabled = true;
+            }
+            for (var i = 0; i < ruby.length; i++) {
+                  ruby[i].disabled = true;
+            }
       }
+      dispatchThemeUpdateEvent();
 }

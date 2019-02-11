@@ -9,13 +9,10 @@ og_description: "Change your theme to light."
 <head>
       <title>CustomCraft - Light Theme</title>
       {% include main-csslist.html %}
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/1.5.001.css">
       {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
       {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
-      <script src="{{ site.baseurl }}/scripts/1.5.001.js"></script>
-      <script src="{{ site.baseurl }}/editor/1.5.001.js"></script>
       <script src="{{ site.baseurl }}/scripts/main.js"></script>
-      <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+      <!--<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
       <script>
             window.TrackJS && TrackJS.install({
                   token: "e26750c4a6054763ae196f2a8db5a376",
@@ -25,27 +22,36 @@ og_description: "Change your theme to light."
             TrackJS.addMetadata("version", "1.5.001");
             TrackJS.addMetadata("ccversion", "1.5");
             TrackJS.addMetadata("eversion", "001");
-      </script>
+      </script>-->
       <script>
-            window.onload = function () {
+            window.addEventListener('windowloaded', function () {
                   document.getElementById("switcher-theme").checked = isLightTheme();
-                  document.getElementById("switcher-theme").onchange = function() {
-                        setLightTheme(this.checked);
-                        updateTheme();
+                  document.getElementById("switcher-theme").onchange = function () {
+                        if (isLightTheme() != this.checked) {
+                              setLightTheme(this.checked);
+                        }
                   };
-                  updateTheme();
+                  window.addEventListener("themechanged", function(e) {
+                        updateTheme();
+                  });
                   window.addEventListener("storage", function(e) {
-                        if (e.key === "lightTheme") {
-                              updateTheme();
-                              document.getElementById("switcher-theme").checked = isLightTheme();
+                        if (e.key === "theme") {
+                              dispatchThemeChangedEvent();
                         }
                   });
-            };
+                  window.addEventListener('themeupdated', function () {
+                        document.getElementById("switcher-theme").checked = isLightTheme();
+                  });
+                  updateTheme();
+            });
       </script>
 </head>
 
 <body>
       {% include navbar.html %}
+      <div class="disclaimer-design-header">YOU ARE ENTERING THE DANGER ZONE</div><br>
+      <div class="disclaimer-design-text">Flip this switch at your own risk! I will not be responsible for any harm the light-theme created!</div>
+      <br>
       <div style="text-align: center">
             <label class="switch">
                   <input id="switcher-theme" type="checkbox">

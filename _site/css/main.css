@@ -1,17 +1,9 @@
 @import url('/fonts/days-one.css');
 
-:root {
-      --background: rgb(22, 22, 22);
-      --background-img: linear-gradient(to top right, rgb(8, 8, 8), rgb(13, 13, 13));
-      --txt-color: white;
-}
-
 html {
+      font-family: 'Days One', sans-serif;
       min-height: 100%;
       background-repeat: no-repeat;
-      background-color: var(--background);
-      background-image: var(--background-img);
-      color: var(--txt-color);
 }
 
 body {
@@ -29,4 +21,20 @@ body {
       margin: 0px;
       margin-bottom: 10px;
       padding: 0px;
+}
+
+
+
+
+.disclaimer-design-header {
+      font-family: 'Days One', sans-serif;
+      font-size: 24px;
+      color: red;
+      text-align: center;
+}
+.disclaimer-design-text {
+      font-family: 'Days One', sans-serif;
+      font-size: 18px;
+      color: red;
+      text-align: center;
 }
