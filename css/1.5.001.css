@@ -286,16 +286,17 @@
       color: white;
 }
 
+
 .slider {
       background-color: rgb(20,20,20)!important;
 }
 
 .slider:before {
-      background-color: white!important;
+      background-color: rgb(120,120,120)!important;
 }
 
 input:checked+.slider {
-      background-color: white!important;
+      background-color: rgb(200,200,200)!important;
 }
 
 input:checked+.slider:before {
@@ -304,4 +305,16 @@ input:checked+.slider:before {
 
 input:focus+.slider {
       box-shadow: 0 0 1px white!important;
+}
+
+input:hover+.slider:before {
+      -webkit-transform: translateX(7px);
+      -ms-transform: translateX(7px);
+      transform: translateX(7px);
+}
+
+input:hover:checked+.slider:before {
+      -webkit-transform: translateX(19px);
+      -ms-transform: translateX(19px);
+      transform: translateX(19px);
 }
