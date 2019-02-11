@@ -99,3 +99,209 @@
       background-color: white;
       color: black;
 }
+
+#editor-recipe-ingredient-list {
+      min-height: 150px;
+      height: 250px;
+      min-width: 100px;
+      width: 200px;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: both;
+      margin-right: 20px;
+}
+#editor-recipe-linked-list {
+      min-height: 150px;
+      height: 250px;
+      min-width: 100px;
+      width: 200px;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: both;
+      margin-right: 20px;
+}
+#editor-recipe-unlock-list {
+      min-height: 150px;
+      height: 250px;
+      min-width: 100px;
+      width: 200px;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: both;
+      margin-right: 20px;
+}
+.ingredient-list-id, .ingredient-list-amount, .ingredient-list-remove {
+      font-family: Arial;
+      border-color: white;
+      background-color: black;
+      border-style: solid;
+      width: 100%;
+      color: white;
+      border-width: 0px;
+      border-bottom-width: 1px;
+}
+.linked-list-id, .linked-list-remove {
+      font-family: Arial;
+      border-color: white;
+      background-color: black;
+      border-style: solid;
+      width: 100%;
+      color: white;
+      border-width: 0px;
+      border-bottom-width: 1px;
+}
+.unlock-list-id, .unlock-list-remove {
+      font-family: Arial;
+      border-color: white;
+      background-color: black;
+      border-style: solid;
+      width: 100%;
+      color: white;
+      border-width: 0px;
+      border-bottom-width: 1px;
+}
+.ingredient-list-entry, .linked-list-entry, .unlock-list-entry {
+      border-bottom: 2px solid white;
+}
+#editor-recipe-citems-list, #editor-customtab-citems-list, #editor-customsize-citems-list, #editor-custombiofuels-citems-list {
+      min-height: 400px;
+      height: fill;
+      width: 100%;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: vertical;
+}
+
+
+.recipe-clist-entry, .customtab-clist-entry, .customsize-clist-entry, .custombiofuels-clist-entry {
+      border-bottom: 4px solid white;
+      padding-bottom: 5px;
+      padding-top: 5px;
+}
+.recipe-clist-ingredients, .recipe-clist-linked, .recipe-clist-unlock {
+      height: 150px;
+      width: 200px;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: vertical;
+}
+
+.editor-recipe-input {
+      background-color: black;
+      color: white;
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-color: white;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-recipe-button {
+      background-color: black!important;
+      color: white!important;
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-color: white!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: background-color 0.25s linear;
+      transition: color 0.25s linear;
+      transition: border-color 0.25s linear;
+}
+.editor-recipe-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-recipe-button-important {
+      background-color: white!important;
+      color: black!important;
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-color: black!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: background-color 0.25s linear;
+      transition: color 0.25s linear;
+      transition: border-color 0.25s linear;
+}
+
+.editor-recipe-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.input-labler {
+      display: inline-block;
+}
+.input-labler-label {
+      display: block;
+      text-align: left;
+      margin-left: 3px;
+      margin-right: 3px;
+      overflow: hidden;
+      width: 100%;
+      color: white;
+}
+
+.slider {
+      background-color: rgb(20,20,20)!important;
+}
+
+.slider:before {
+      background-color: white!important;
+}
+
+input:checked+.slider {
+      background-color: white!important;
+}
+
+input:checked+.slider:before {
+      background-color: black!important;
+}
+
+input:focus+.slider {
+      box-shadow: 0 0 1px white!important;
+}
