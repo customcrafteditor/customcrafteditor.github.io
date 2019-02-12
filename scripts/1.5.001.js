@@ -22,6 +22,7 @@ function parseString(input) {
       var currentInnerFieldGetValueNow = false;
       var currentInnerFieldValue = "";
       var currentlineComment = false;
+      var ignoreBrackets = false;
 
       var currentObject;
       var currentIngredient;
@@ -112,7 +113,7 @@ function parseString(input) {
 
                                           }
                                     } else if (openBrackets == 1 || openBrackets == 2) {
-                                          if (openBrackets == 1 && c == ")") {
+                                          if (openBrackets == 1 && c == ")" && !ignoreBrackets) {
                                                 openBrackets--;
                                                 if (input_mode == 1) {
                                                       addedRecipes.push(currentObject);
@@ -233,6 +234,7 @@ function parseString(input) {
                                                                               }
                                                                         } else if (currentFieldCheck == "DisplayName" || currentFieldCheck == "Tooltip") {
                                                                               currentFieldValue = "";
+                                                                              ignoreBrackets = true;
                                                                               if (c == "\"") {
 
                                                                               } else {
@@ -246,7 +248,7 @@ function parseString(input) {
                                                                   if (currentFieldCheck == "Ingredients") {
                                                                         if (openBrackets == 2) {
                                                                               if (currentInnerField == "") {
-                                                                                    if (c == ")") {
+                                                                                    if (c == ")" && !ignoreBrackets) {
                                                                                           currentFieldValue.push(currentIngredient);
 
                                                                                           currentIngredient = null;
@@ -265,7 +267,7 @@ function parseString(input) {
                                                                                     }
                                                                               } else {
                                                                                     if (!currentInnerFieldGetValueNow) {
-                                                                                          if (c == ")") {
+                                                                                          if (c == ")" && !ignoreBrackets) {
                                                                                                 if (currentInnerField !== "" && currentInnerFieldValue !== "") {
                                                                                                       if (currentInnerField == "ItemID") {
                                                                                                             currentIngredient.id = currentInnerFieldValue;
@@ -302,7 +304,7 @@ function parseString(input) {
                                                                                           }
                                                                                     } else {
                                                                                           if (currentInnerFieldValue === "") {
-                                                                                                if (c == ")") {
+                                                                                                if (c == ")" && !ignoreBrackets) {
                                                                                                       currentFieldValue.push(currentIngredient);
 
                                                                                                       currentIngredient = null;
@@ -337,7 +339,7 @@ function parseString(input) {
                                                                                                       currentInnerFieldValue += c;
                                                                                                 }
                                                                                           } else {
-                                                                                                if (c == ")") {
+                                                                                                if (c == ")" && !ignoreBrackets) {
                                                                                                       if (currentInnerField != "" && currentInnerFieldValue != "") {
                                                                                                             if (currentInnerField == "ItemID") {
                                                                                                                   currentIngredient.id = currentInnerFieldValue;
@@ -473,6 +475,7 @@ function parseString(input) {
                                                                               } else if (currentFieldCheck == "Tooltip") {
                                                                                     currentObject.tooltip = currentFieldValue;
                                                                               }
+                                                                              ignoreBrackets = false;
                                                                               currentFieldCheck = "";
                                                                               currentFieldGetValueNow = false;
                                                                               currentFieldValue = "";
