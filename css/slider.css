@@ -38,3 +38,15 @@ input:checked+.slider:before {
       -ms-transform: translateX(26px);
       transform: translateX(26px);
 }
+
+input:hover+.slider:before {
+      -webkit-transform: translateX(7px);
+      -ms-transform: translateX(7px);
+      transform: translateX(7px);
+}
+
+input:hover:checked+.slider:before {
+      -webkit-transform: translateX(19px);
+      -ms-transform: translateX(19px);
+      transform: translateX(19px);
+}
