@@ -54,23 +54,23 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                   <div class="recipe-clist-entry">
                         <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
                               --><div class="input-labler"><!--
-                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><label id="editor-recipe-edit-id-label" class="input-labler-label" type="text">ID</label><!--
                                     --><input type="text" class="recipe-clist-id" placeholder="" list="item-ids-list"></input><!--
                               --></div><!--
                               --><div class="input-labler"><!--
-                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Amount</label><!--
+                                    --><label id="editor-recipe-edit-id-label" class="input-labler-label" type="text">Amount</label><!--
                                     --><input type="number" min="-1" max="99" class="recipe-clist-amount" placeholder=""></input><!--
                               --></div><!--
                               --><div class="input-labler"><!--
-                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Display Name</label><!--
+                                    --><label id="editor-recipe-edit-id-label" class="input-labler-label" type="text">Display Name</label><!--
                                     --><input type="text" class="recipe-clist-displayname" placeholder=""></input><!--
                               --></div><!--
                               --><div class="input-labler"><!--
-                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Tooltip</label><!--
+                                    --><label id="editor-recipe-edit-id-label" class="input-labler-label" type="text">Tooltip</label><!--
                                     --><input type="text" class="recipe-clist-tooltip" placeholder=""></input><!--
                               --></div><!--
                               --><div class="input-labler"><!--
-                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Path</label><!--
+                                    --><label id="editor-recipe-edit-id-label" class="input-labler-label" type="text">Path</label><!--
                                     --><input type="text" class="recipe-clist-path" placeholder="" list="craftingtabs-ids-list"></input><!--
                               --></div><!--
                               --><Label>Default ForceUnlock<input class="recipe-clist-forceunlock-default" type="checkbox"></Label><!--
@@ -106,11 +106,25 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             </template>
             <template id="customtab-clist-template">
                   <div class="customtab-clist-entry">
-                        <input type="text" class="customtab-clist-id" placeholder="ID"></input>
-                        <input type="text" class="customtab-clist-displayname" placeholder="Display Name"></input>
-                        <input type="text" class="customtab-clist-sprite" placeholder="Sprite ItemID" list="item-ids-list"></input>
-                        <input type="text" class="customtab-clist-parentpath" placeholder="Parent Path" list="craftingtabs-ids-list"></input>
-                        <button class="customtab-clist-remove">Remove</button>
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="customtab-clist-id" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-displayname-label" class="input-labler-label" type="text">Display Name</label><!--
+                                    --><input type="text" class="customtab-clist-displayname" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-sprite-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
+                                    --><input type="text" class="customtab-clist-sprite" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-parentpath-label" class="input-labler-label" type="text">Parent Path</label><!--
+                                    --><input type="text" class="customtab-clist-parentpath" placeholder="" list="craftingtabs-ids-list"></input><!--
+                              --></div><!--
+                              --><button class="customtab-clist-remove">Remove</button><!--
+                        --></div></div>
                   </div>
             </template>
             <template id="customsize-clist-template">
@@ -131,7 +145,7 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             <div class="editor-marginner">
                   <div id="output-mode">Output</div>
                   <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea><!--
-                  --><div style="text-align: center"><div class="button-section" style="border-top-width: 0px;width: 100%;"><!--
+                  --><div style="text-align: center"><div class="button-section" style="border-top-width: 0px;width: 100%;background-color: black;"><!--
                         --><button id="help-me" class="button-section-wrap-l">Help (Not implemented)</button><!--
                         --><div class="button-section-divider"></div><!--
                         --><button id="copy-output">Copy output</button><!--
@@ -246,21 +260,21 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                               --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
                                     --><div class="input-labler"><!--
                                           --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">ID</label><!--
-                                          --><input id="editor-customtab-add-id" type="text" placeholder=""><!--
+                                          --><input id="editor-customtab-add-id" class="editor-customtab-input" type="text" placeholder=""><!--
                                     --></div><!--
                                     --><div class="input-labler"><!--
                                           --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Display Name</label><!--
-                                          --><input id="editor-customtab-add-display" type="text" placeholder=""><!--
+                                          --><input id="editor-customtab-add-display" class="editor-customtab-input" type="text" placeholder=""><!--
                                     --></div><!--
                                     --><div class="input-labler"><!--
                                           --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
-                                          --><input id="editor-customtab-add-spriteitemid" type="text" placeholder="" list="item-ids-list"><!--
+                                          --><input id="editor-customtab-add-spriteitemid" class="editor-customtab-input" type="text" placeholder="" list="item-ids-list"><!--
                                     --></div><!--
                                     --><div class="input-labler"><!--
                                           --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Parent Path</label><!--
-                                          --><input id="editor-customtab-add-parentpath" type="text" placeholder="" list="craftingtabs-ids-list"><!--
+                                          --><input id="editor-customtab-add-parentpath" type="text" class="editor-customtab-input" placeholder="" list="craftingtabs-ids-list"><!--
                                     --></div><!--
-                                    --><button id="editor-customtab-add-confirm">Add a Tab</button><!--
+                                    --><button id="editor-customtab-add-confirm" class="editor-customtab-button-important">Add a Tab</button><!--
                               --></div></div>
                         </div>
                         <div class="editor-change">
@@ -786,98 +800,65 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                   <!--  -->
             </datalist>
             <datalist id="craftingtabs-ids-list">
-                  <option value="Constructor">Mobile Vehicle Bay</option>
-                  <option value="Constructor">CONSTRUCTOR</option>
+                  <option value="Constructor">constructor</option>
 
-                  <option value="Constructor/Vehicles">Mobile Vehicle Bay > Vehicles</option>
-                  <option value="Constructor/Vehicles">CONSTRUCTOR/VEHICLES</option>
+                  <option value="Constructor/Vehicles">constructor/vehicles</option>
 
-                  <option value="Constructor/Rocket">Mobile Vehicle Bay > Rocket</option>
-                  <option value="Constructor/Rocket">CONSTRUCTOR/VEHICLES</option>
+                  <option value="Constructor/Rocket">constructor/vehicles</option>
 
-                  <option value="CyclopsFabricator">Cyclops Fabricator</option>
-                  <option value="CyclopsFabricator">CYCLOPSFABRICATOR</option>
+                  <option value="CyclopsFabricator">cyclopsfabricator</option>
 
-                  <option value="Fabricator">Fabricator</option>
-                  <option value="Fabricator">FABRICATOR</option>
+                  <option value="Fabricator">fabricator</option>
 
-                  <option value="Fabricator/Resources">Fabricator > Resources</option>
-                  <option value="Fabricator/Resources">FABRICATOR/RESOURCES</option>
+                  <option value="Fabricator/Resources">fabricator/resources</option>
 
-                  <option value="Fabricator/Resources/BasicMaterials">Fabricator > Resources > Basic Materials</option>
-                  <option value="Fabricator/Resources/BasicMaterials">FABRICATOR/RESOURCES/BASICMATERIALS</option>
+                  <option value="Fabricator/Resources/BasicMaterials">fabricator/resources/basicmaterials</option>
 
-                  <option value="Fabricator/Resources/AdvancedMaterials">Fabricator > Resources > Advanced Materials</option>
-                  <option value="Fabricator/Resources/AdvancedMaterials">FABRICATOR/RESOURCES/ADVANCEDMATERIALS</option>
+                  <option value="Fabricator/Resources/AdvancedMaterials">fabricator/resources/advancedmaterials</option>
 
-                  <option value="Fabricator/Resources/Electronics">Fabricator > Resources > Electronics</option>
-                  <option value="Fabricator/Resources/Electronics">FABRICATOR/RESOURCES/ELECTRONICS</option>
+                  <option value="Fabricator/Resources/Electronics">fabricator/resources/electronics</option>
 
-                  <option value="Fabricator/Survival">Fabricator > Survival</option>
-                  <option value="Fabricator/Survival">FABRICATOR/SURVIVAL</option>
+                  <option value="Fabricator/Survival">fabricator/survival</option>
 
-                  <option value="Fabricator/Survival/Water">Fabricator > Survival > Water</option>
-                  <option value="Fabricator/Survival/Water">FABRICATOR/SURVIVAL/WATER</option>
+                  <option value="Fabricator/Survival/Water">fabricator/survival/water</option>
 
-                  <option value="Fabricator/Survival/CookedFood">Fabricator > Survival > Cooked Food</option>
-                  <option value="Fabricator/Survival/CookedFood">FABRICATOR/SURVIVAL/COOKEDFOOD</option>
+                  <option value="Fabricator/Survival/CookedFood">fabricator/survival/cookedfood</option>
 
-                  <option value="Fabricator/Survival/CuredFood">Fabricator > Survival > Cured Food</option>
-                  <option value="Fabricator/Survival/CuredFood">FABRICATOR/SURVIVAL/CUREDFOOD</option>
+                  <option value="Fabricator/Survival/CuredFood">fabricator/survival/curedfood</option>
 
-                  <option value="Fabricator/Personal">Fabricator > Personal</option>
-                  <option value="Fabricator/Personal">FABRICATOR/PERSONAL</option>
+                  <option value="Fabricator/Personal">fabricator/personal</option>
 
-                  <option value="Fabricator/Personal/Equipment">Fabricator > Personal > Equipment</option>
-                  <option value="Fabricator/Personal/Equipment">FABRICATOR/PERSONAL/EQUIPMENT</option>
+                  <option value="Fabricator/Personal/Equipment">fabricator/personal/equipment</option>
 
-                  <option value="Fabricator/Personal/Tools">Fabricator > Personal > Tools</option>
-                  <option value="Fabricator/Personal/Tools">FABRICATOR/PERSONAL/TOOLS</option>
+                  <option value="Fabricator/Personal/Tools">fabricator/personal/tools</option>
 
-                  <option value="Fabricator/Machines">Fabricator > Machines</option>
-                  <option value="Fabricator/Machines">Fabricator > Deployables</option>
-                  <option value="Fabricator/Machines">FABRICATOR/MACHINES</option>
+                  <option value="Fabricator/Machines">fabricator/machines</option>
 
-                  <option value="MapRoom">Scanner Room</option>
-                  <option value="MapRoom">MAPROOM</option>
+                  <option value="MapRoom">maproom</option>
 
-                  <option value="SeamothUpgrades">Vehicle Upgrade Console</option>
-                  <option value="SeamothUpgrades">SEAMOTHUPGRADES</option>
+                  <option value="SeamothUpgrades">seamothupgrades</option>
 
-                  <option value="SeamothUpgrades/CommonModules">Vehicle Upgrade Console > Common Modules</option>
-                  <option value="SeamothUpgrades/CommonModules">SEAMOTHUPGRADES/COMMONMODULES</option>
+                  <option value="SeamothUpgrades/CommonModules">seamothupgrades/commonmodules</option>
 
-                  <option value="SeamothUpgrades/SeamothModules">Vehicle Upgrade Console > Seamoth Modules</option>
-                  <option value="SeamothUpgrades/SeamothModules">SEAMOTHUPGRADES/SEAMOTHMODULES</option>
+                  <option value="SeamothUpgrades/SeamothModules">seamothupgrades/seamothmodules</option>
 
-                  <option value="SeamothUpgrades/ExosuitModules">Vehicle Upgrade Console > Exosuit Modules</option>
-                  <option value="SeamothUpgrades/ExosuitModules">Vehicle Upgrade Console > Prawnsuit Modules</option>
-                  <option value="SeamothUpgrades/ExosuitModules">SEAMOTHUPGRADES/ExosuitModules</option>
+                  <option value="SeamothUpgrades/ExosuitModules">seamothupgrades/exosuitmodules</option>
 
-                  <option value="Workbench">Modification Station</option>
-                  <option value="Workbench">WORKBENCH</option>
+                  <option value="Workbench">workbench</option>
 
-                  <option value="Workbench/KnifeMenu">Modification Station > Knife</option>
-                  <option value="Workbench/KnifeMenu">WORKBENCH/KNIFEMENU</option>
+                  <option value="Workbench/KnifeMenu">workbench/knifemenu</option>
 
-                  <option value="Workbench/TankMenu">Modification Station > Tank</option>
-                  <option value="Workbench/TankMenu">WORKBENCH/TANKMENU</option>
+                  <option value="Workbench/TankMenu">workbench/tankmenu</option>
 
-                  <option value="Workbench/FinsMenu">Modification Station > Fins</option>
-                  <option value="Workbench/FinsMenu">WORKBENCH/FINSMENU</option>
+                  <option value="Workbench/FinsMenu">workbench/finsmenu</option>
 
-                  <option value="Workbench/PropulsionCannonMenu">Modification Station > Propulsion Cannon</option>
-                  <option value="Workbench/PropulsionCannonMenu">WORKBENCH/PROPULSIONCANNONMENU</option>
+                  <option value="Workbench/PropulsionCannonMenu">workbench/propulsioncannonmenu</option>
 
-                  <option value="Workbench/CyclopsMenu">Modification Station > Cyclops</option>
-                  <option value="Workbench/CyclopsMenu">WORKBENCH/CYCLOPSMENU</option>
+                  <option value="Workbench/CyclopsMenu">workbench/cyclopsmenu</option>
 
-                  <option value="Workbench/SeamothMenu">Modification Station > Seamoth</option>
-                  <option value="Workbench/SeamothMenu">WORKBENCH/SEAMOTHMENU</option>
+                  <option value="Workbench/SeamothMenu">workbench/seamothmenu</option>
 
-                  <option value="Workbench/ExosuitMenu">Modification Station > Exosuit</option>
-                  <option value="Workbench/ExosuitMenu">Modification Station > Prawnsuit</option>
-                  <option value="Workbench/ExosuitMenu">WORKBENCH/EXOSUITMENU</option>
+                  <option value="Workbench/ExosuitMenu">workbench/exosuitmenu</option>
             </datalist>
       </body>
       <footer>
