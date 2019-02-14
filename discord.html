@@ -1,8 +1,14 @@
 ---
+og_title: "Subnautica Modding Discord"
+og_type: "website"
+og_url: "/discord"
+og_description: "You are invited to the Subnautica Modding Discord. Join now!"
 ---
 <html>
 
 <head>
+      {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
+      {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
       <meta http-equiv="refresh" content="1;url=https://discord.gg/UpWuWwq">
       <script type="text/javascript">
             window.location.href = "https://discord.gg/UpWuWwq"
