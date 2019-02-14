@@ -23,6 +23,13 @@
       border-color: white;
 }
 
+#navbar-discord {
+      color: #7289DA!important;
+}
+#navbar-discord-logo path {
+      fill: #7289DA;
+}
+
 #navbar-github {
       color: #6e5494!important;
 }

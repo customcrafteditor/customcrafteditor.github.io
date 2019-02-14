@@ -55,7 +55,15 @@
       margin-right: 10px;
 }
 
-#navbar-github {}
+#navbar-discord-logo {
+      vertical-align: middle;
+      width: auto;
+      height: 50px;
+      float: right;
+      top: 0;
+      margin: 0px;
+      margin-top: -7px;
+}
 
 #navbar-github-logo {
       vertical-align: middle;
