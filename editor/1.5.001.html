@@ -129,10 +129,21 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             </template>
             <template id="customsize-clist-template">
                   <div class="customsize-clist-entry">
-                        <input type="text" class="customsize-clist-id" placeholder="ID" list="item-ids-list"></input>
-                        <input type="number" class="customsize-clist-width" min="1" max="99" placeholder="Width"></input>
-                        <input type="number" class="customsize-clist-height" min="1" max="99" placeholder="Height"></input>
-                        <button class="customsize-clist-remove">Remove</button>
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customsize-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="customsize-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customsize-edit-width-label" class="input-labler-label" type="text">Width</label><!--
+                                    --><input type="number" class="customsize-clist-width" min="1" max="99" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customsize-edit-height-label" class="input-labler-label" type="text">Height</label><!--
+                                    --><input type="number" class="customsize-clist-height" min="1" max="99" placeholder=""></input><!--
+                              --></div><!--
+                              --><button class="customsize-clist-remove">Remove</button><!--
+                        --></div></div>
                   </div>
             </template>
             <template id="custombiofuels-clist-template">
@@ -283,11 +294,26 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                         </div>
                   </div>
                   <div id="editor-customsize" hidden="hidden">
-                        <div class="editor-add">
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customsize-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-customtab-add-id" class="editor-customtab-input" type="text" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customsize-add-tooltip-label" class="input-labler-label" type="text">Display Name</label><!--
+                                          --><input id="editor-customtab-add-display" class="editor-customtab-input" type="text" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customsize-add-tooltip-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
+                                          --><input id="editor-customsize-add-height" type="number" min="1" max="99" value="1" placeholder=""><!--
+                                    --></div><!--
+                                    --><button id="editor-customsize-add-confirm">Add a Size</button><!--
+                              --></div></div>
                               <input id="editor-customsize-add-id" type="text" placeholder="ID" list="item-ids-list">
                               <input id="editor-customsize-add-width" type="number" min="1" max="99" value="1" placeholder="Width">
-                              <input id="editor-customsize-add-height" type="number" min="1" max="99" value="1" placeholder="Height">
-                              <button id="editor-customsize-add-confirm">Add a Size</button>
+                              
+                              
                         </div>
                         <div class="editor-change">
                               <div id="editor-customsize-citems-list">
