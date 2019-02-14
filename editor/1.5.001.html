@@ -52,14 +52,31 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             </template>
             <template id="recipe-clist-template">
                   <div class="recipe-clist-entry">
-                        <input type="text" class="recipe-clist-id" placeholder="ID" list="item-ids-list"></input>
-                        <input type="number" min="-1" max="99" class="recipe-clist-amount" placeholder="Amount"></input>
-                        <input type="text" class="recipe-clist-displayname" placeholder="Display Name"></input>
-                        <input type="text" class="recipe-clist-tooltip" placeholder="Tooltip"></input>
-                        <input type="text" class="recipe-clist-path" placeholder="Path" list="craftingtabs-ids-list"></input>
-                        <Label>Default ForceUnlock<input class="recipe-clist-forceunlock-default" type="checkbox"></Label>
-                        <Label>Unlocks at Start<input class="recipe-clist-forceunlock" type="checkbox"></Label>
-                        <button class="recipe-clist-remove">Remove</button>
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="recipe-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Amount</label><!--
+                                    --><input type="number" min="-1" max="99" class="recipe-clist-amount" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Display Name</label><!--
+                                    --><input type="text" class="recipe-clist-displayname" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Tooltip</label><!--
+                                    --><input type="text" class="recipe-clist-tooltip" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Path</label><!--
+                                    --><input type="text" class="recipe-clist-path" placeholder="" list="craftingtabs-ids-list"></input><!--
+                              --></div><!--
+                              --><Label>Default ForceUnlock<input class="recipe-clist-forceunlock-default" type="checkbox"></Label><!--
+                              --><Label>Unlocks at Start<input class="recipe-clist-forceunlock" type="checkbox"></Label><!--
+                              --><button class="recipe-clist-remove">Remove</button><!--
+                        --></div></div>
                         <br>
                         <br>
                         <div class="recipe-clist-ingredients"></div>
@@ -225,12 +242,26 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                         </div>
                   </div>
                   <div id="editor-customtab" hidden="hidden">
-                        <div class="editor-add">
-                              <input id="editor-customtab-add-id" type="text" placeholder="ID">
-                              <input id="editor-customtab-add-display" type="text" placeholder="Display Name">
-                              <input id="editor-customtab-add-spriteitemid" type="text" placeholder="Sprite ItemID" list="item-ids-list">
-                              <input id="editor-customtab-add-parentpath" type="text" placeholder="Parent Path" list="craftingtabs-ids-list">
-                              <button id="editor-customtab-add-confirm">Add a Tab</button>
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-customtab-add-id" type="text" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Display Name</label><!--
+                                          --><input id="editor-customtab-add-display" type="text" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
+                                          --><input id="editor-customtab-add-spriteitemid" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Parent Path</label><!--
+                                          --><input id="editor-customtab-add-parentpath" type="text" placeholder="" list="craftingtabs-ids-list"><!--
+                                    --></div><!--
+                                    --><button id="editor-customtab-add-confirm">Add a Tab</button><!--
+                              --></div></div>
                         </div>
                         <div class="editor-change">
                               <div id="editor-customtab-citems-list">
