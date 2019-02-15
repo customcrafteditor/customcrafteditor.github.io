@@ -148,9 +148,17 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             </template>
             <template id="custombiofuels-clist-template">
                   <div class="custombiofuels-clist-entry">
-                        <input type="text" class="custombiofuels-clist-id" placeholder="ID" list="item-ids-list"></input>
-                        <input type="number" class="custombiofuels-clist-fuel" min="0" placeholder="Energy"></input>
-                        <button class="custombiofuels-clist-remove">Remove</button>
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-custombiofuels-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="custombiofuels-clist-id" placeholder="ID" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-custombiofuels-edit-height-label" class="input-labler-label" type="text">Energy</label><!--
+                                    --><input type="number" class="custombiofuels-clist-fuel" min="0" placeholder=""></input><!--
+                              --></div><!--
+                              --><button class="custombiofuels-clist-remove">Remove</button><!--
+                        --></div></div>
                   </div>
             </template>
             <div class="editor-marginner">
@@ -270,19 +278,19 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                         <div class="editor-add"><!--
                               --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
                                     --><div class="input-labler"><!--
-                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">ID</label><!--
                                           --><input id="editor-customtab-add-id" class="editor-customtab-input" type="text" placeholder=""><!--
                                     --></div><!--
                                     --><div class="input-labler"><!--
-                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Display Name</label><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">Display Name</label><!--
                                           --><input id="editor-customtab-add-display" class="editor-customtab-input" type="text" placeholder=""><!--
                                     --></div><!--
                                     --><div class="input-labler"><!--
-                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
                                           --><input id="editor-customtab-add-spriteitemid" class="editor-customtab-input" type="text" placeholder="" list="item-ids-list"><!--
                                     --></div><!--
                                     --><div class="input-labler"><!--
-                                          --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Parent Path</label><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">Parent Path</label><!--
                                           --><input id="editor-customtab-add-parentpath" type="text" class="editor-customtab-input" placeholder="" list="craftingtabs-ids-list"><!--
                                     --></div><!--
                                     --><button id="editor-customtab-add-confirm" class="editor-customtab-button-important">Add a Tab</button><!--
@@ -308,7 +316,7 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                                           --><label id="editor-customsize-add-tooltip-label" class="input-labler-label" type="text">Height</label><!--
                                           --><input id="editor-customsize-add-height" class="editor-customsize-input" type="number" min="1" max="99" value="1" placeholder=""><!--
                                     --></div><!--
-                                    --><button id="editor-customsize-add-confirm">Add a Size</button><!--
+                                    --><button id="editor-customsize-add-confirm" class="editor-customsize-button-important">Add a Size</button><!--
                               --></div></div>
                         </div>
                         <div class="editor-change">
@@ -317,10 +325,18 @@ og_description: "An editor for Custom Craft 2 version 1.5"
                         </div>
                   </div>
                   <div id="editor-custombiofuels" hidden="hidden">
-                        <div class="editor-add">
-                              <input id="editor-custombiofuels-add-id" type="text" placeholder="ID" list="item-ids-list">
-                              <input id="editor-custombiofuels-add-fuel" type="number" min="0" value="0" placeholder="Energy">
-                              <button id="editor-custombiofuels-add-confirm">Add a BioFuel</button>
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-custombiofuels-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-custombiofuels-add-id" class="editor-custombiofuels-input" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-custombiofuels-add-fuel-label" class="input-labler-label" type="text">Energy</label><!--
+                                          --><input id="editor-custombiofuels-add-fuel" class="editor-custombiofuels-input" type="number" min="0" value="0" placeholder=""><!--
+                                    --></div><!--
+                                    --><button id="editor-custombiofuels-add-confirm" class="editor-custombiofuels-button-important">Add a BioFuel</button><!--
+                              --></div></div>
                         </div>
                         <div class="editor-change">
                               <div id="editor-custombiofuels-citems-list">

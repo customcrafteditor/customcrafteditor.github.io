@@ -27,7 +27,7 @@ function parseString(input) {
 
       input_array.forEach((c, i) => {
             if (!canceled) {
-                  if (c !== "#" && !currentlineComment) {
+                  if (c != "#" && !currentlineComment) {
                         if (!(input_mode > 0)) {
                               if (c == " " || c == "\n") {
 
@@ -878,12 +878,19 @@ function parseString(input) {
                               }
                         }
                   } else {
-                        if (c === "#") {
-                              currentlineComment = true;
-                        } else if (c === "\n") {
-                              currentlineComment = false;
+                        if (!currentlineComment) {
+                              if (c == "#") {
+                                    currentlineComment = true;
+                              }
                         } else {
+                              if (c == "#") {
+                                    //currentlineComment = true;
+                                    currentlineComment = false;
+                              } else if (c == "\n") {
+                                    //currentlineComment = false;
+                              } else {
 
+                              }
                         }
                   }
             }

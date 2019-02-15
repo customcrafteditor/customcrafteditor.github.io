@@ -1000,6 +1000,114 @@
 }
 
 
+
+
+.editor-custombiofuels-input {
+      background-color: black;
+      color: white;
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-color: white;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-custombiofuels-button {
+      background-color: black!important;
+      color: white!important;
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-color: white!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+.editor-custombiofuels-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-custombiofuels-button-important {
+      background-color: white!important;
+      color: black!important;
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-color: black!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-custombiofuels-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.custombiofuels-clist-id {
+      background-color: black;
+      color: white;
+      font-family: 'Days One', sans-serif;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.custombiofuels-clist-fuel {
+      background-color: black;
+      color: white;
+      font-family: 'Days One', sans-serif;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.custombiofuels-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      font-family: 'Days One', sans-serif!important;
+      border-color: white!important;
+      border-width: 1px!important;
+      margin-left: 3px;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+.custombiofuels-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
 .input-labler {
       display: inline-block;
 }
