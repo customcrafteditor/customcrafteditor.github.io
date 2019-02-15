@@ -1,3 +1,4 @@
 
 *.lock
 _config.yaml
+_site/*
