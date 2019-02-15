@@ -9,6 +9,8 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             <title>CustomCraft - Editor v.1.5.001</title>
             {% include main-csslist.html %}
             <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/1.5.001.css">
+            <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/1.5.001-dark.css" class="theme-dark">
+            <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/1.5.001-light.css" class="theme-light">
             {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
             {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
             <script src="{{ site.baseurl }}/scripts/1.5.001.js"></script>
@@ -164,7 +166,7 @@ og_description: "An editor for Custom Craft 2 version 1.5"
             <div class="editor-marginner">
                   <div id="output-mode">Output</div>
                   <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea><!--
-                  --><div style="text-align: center"><div class="button-section" style="border-top-width: 0px;width: 100%;background-color: black;"><!--
+                  --><div style="text-align: center"><div class="button-section" id="modeselector" ><!--
                         --><button id="help-me" class="button-section-wrap-l">Help (Not implemented)</button><!--
                         --><div class="button-section-divider"></div><!--
                         --><button id="copy-output">Copy output</button><!--

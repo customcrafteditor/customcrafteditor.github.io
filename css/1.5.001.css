@@ -2,9 +2,6 @@
 ---
 #code-output {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
-      color: white;
       border-style: solid;
       width: 100%;
       height: 50%;
@@ -23,9 +20,6 @@
 
 #code-input {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
-      color: white;
       border-style: solid;
       width: 100%;
       height: 50%;
@@ -38,9 +32,7 @@
 /* BUTTON SECTION */
 .button-section {
       display: inline-block;
-      background-color: transparent;
       border-width: 1px;
-      border-color: white;
       border-radius: 0;
       border-style: solid;
 }
@@ -60,7 +52,6 @@
       border-bottom-right-radius: 10px;
 }
 */
-
 .button-section>.button-section-divider {
       margin: 0px;
       margin-left: 0px;
@@ -72,9 +63,12 @@
       border-right: 0px;
       display: inline;
       border-style: solid;
-      border-color: cyan;
       background-color: transparent;
-      color: cyan;
+}
+
+#modeselector {
+      border-top-width: 0px;
+      width: 100%;
 }
 
 .button-section>button {
@@ -90,16 +84,10 @@
       vertical-align: middle;
       font-family: 'Days One', sans-serif;
       font-size: 16px;
-      background-color: transparent;
-      color: white;
       transition: 0.25s ease-in-out;
       transition-property: color,background-color;
 }
 
-.button-section>button:hover {
-      background-color: white;
-      color: black;
-}
 
 /*  */
 #editor-recipe-ingredient-list {
@@ -110,7 +98,6 @@
       scroll-behavior: smooth;
       overflow-x: scroll;
       overflow-y: scroll;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       vertical-align: top;
@@ -125,7 +112,6 @@
       scroll-behavior: smooth;
       overflow-x: scroll;
       overflow-y: scroll;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       vertical-align: top;
@@ -140,7 +126,6 @@
       scroll-behavior: smooth;
       overflow-x: scroll;
       overflow-y: scroll;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       vertical-align: top;
@@ -151,12 +136,9 @@
 /* INGREDIENT LIST */
 .ingredient-list-id {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 55%;
-      color: white;
       border-width: 0px;
       padding: 0px;
       padding-left: 3px;
@@ -168,12 +150,9 @@
 }
 .ingredient-list-amount {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 15%;
-      color: white;
       border-width: 0px;
       border-left-width: 1px;
       border-right-width: 1px;
@@ -187,12 +166,9 @@
 }
 .ingredient-list-remove {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 30%;
-      color: white;
       border-width: 0px;
       padding: 0px;
       margin: 0px;
@@ -200,13 +176,8 @@
       transition: 0.25s ease-in-out;
       transition-property: color,background-color;
 }
-.ingredient-list-remove:hover {
-      border-color: black;
-      background-color: white;
-      color: black;
-}
 .ingredient-list-entry {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       overflow: hidden;
       height: 30px;
       font-size: 0;
@@ -215,12 +186,9 @@
 /* LINKED LIST */
 .linked-list-id {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 70%;
-      color: white;
       border-width: 0px;
       border-right-width: 1px;
       padding: 0px;
@@ -233,12 +201,9 @@
 }
 .linked-list-remove {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 30%;
-      color: white;
       border-width: 0px;
       padding: 0px;
       margin: 0px;
@@ -246,13 +211,8 @@
       transition: 0.25s ease-in-out;
       transition-property: color,background-color;
 }
-.linked-list-remove:hover {
-      border-color: black;
-      background-color: white;
-      color: black;
-}
 .linked-list-entry {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       overflow: hidden;
       height: 30px;
       font-size: 0;
@@ -261,12 +221,9 @@
 /* UNLOCK LIST */
 .unlock-list-id {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 70%;
-      color: white;
       border-width: 0px;
       border-right-width: 1px;
       padding: 0px;
@@ -279,12 +236,9 @@
 }
 .unlock-list-remove {
       font-family: 'Days One', sans-serif;
-      border-color: white;
-      background-color: black;
       border-style: solid;
       height: 30px;
       width: 30%;
-      color: white;
       border-width: 0px;
       padding: 0px;
       margin: 0px;
@@ -292,13 +246,8 @@
       transition: 0.25s ease-in-out;
       transition-property: color,background-color;
 }
-.unlock-list-remove:hover {
-      border-color: black;
-      background-color: white;
-      color: black;
-}
 .unlock-list-entry {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       overflow: hidden;
       height: 30px;
       font-size: 0;
@@ -313,7 +262,6 @@
       scroll-behavior: smooth;
       overflow-x: scroll;
       overflow-y: scroll;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       vertical-align: top;
@@ -321,15 +269,12 @@
 }
 
 .recipe-clist-entry, .customtab-clist-entry, .customsize-clist-entry, .custombiofuels-clist-entry {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       padding-bottom: 5px;
       padding-top: 5px;
 }
 .recipe-clist-remove {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
-      border-color: white!important;
       border-width: 1px!important;
       border-style: solid!important;
       transition: 0.25s ease-in-out!important;
@@ -337,16 +282,8 @@
       -webkit-appearance: textfield!important;
       -moz-appearance: textfield!important;
 }
-.recipe-clist-remove:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
-}
 .recipe-clist-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -358,10 +295,7 @@
       padding-right: 3px;
 }
 .recipe-clist-amount {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -373,10 +307,7 @@
       padding-right: 3px;
 }
 .recipe-clist-displayname {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -388,10 +319,7 @@
       padding-right: 3px;
 }
 .recipe-clist-tooltip {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -403,10 +331,7 @@
       padding-right: 3px;
 }
 .recipe-clist-path {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -419,9 +344,6 @@
 }
 
 .recipe-clist-ingredients {
-      background-color: black;
-      color: white;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       height: 150px;
@@ -433,9 +355,6 @@
       resize: vertical;
 }
 .recipe-clist-ingredients-add {
-      background-color: black;
-      color: white;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       font-family: 'Days One', sans-serif;
@@ -449,23 +368,15 @@
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
 }
-.recipe-clist-ingredients-add:hover {
-      background-color: white;
-      color: black;
-      border-color: black;
-}
 .recipe-clist-ingredient-entry {
       height: 30px;
       width: 100%;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       overflow: hidden;
       font-size: 0;
 }
 .recipe-clist-ingredient-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 50%;
       border-width: 0px;
@@ -478,10 +389,7 @@
       padding-right: 3px;
 }
 .recipe-clist-ingredient-amount {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 20%;
       border-width: 0px;
@@ -496,10 +404,7 @@
       padding-right: 3px;
 }
 .recipe-clist-ingredient-remove {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 30%;
       border-width: 0px;
@@ -513,15 +418,8 @@
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color!important;
 }
-.recipe-clist-ingredient-remove:hover {
-      background-color: white;
-      color: black;
-}
 
 .recipe-clist-linked {
-      background-color: black;
-      color: white;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       height: 150px;
@@ -533,9 +431,6 @@
       resize: vertical;
 }
 .recipe-clist-linked-add {
-      background-color: black;
-      color: white;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       font-family: 'Days One', sans-serif;
@@ -549,23 +444,15 @@
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
 }
-.recipe-clist-linked-add:hover {
-      background-color: white;
-      color: black;
-      border-color: black;
-}
 .recipe-clist-linked-entry {
       height: 30px;
       width: 100%;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       overflow: hidden;
       font-size: 0;
 }
 .recipe-clist-linked-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 70%;
       border-width: 0px;
@@ -579,10 +466,7 @@
       padding-right: 3px;
 }
 .recipe-clist-linked-remove {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 30%;
       border-width: 0px;
@@ -596,15 +480,8 @@
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color!important;
 }
-.recipe-clist-linked-remove:hover {
-      background-color: white;
-      color: black;
-}
 
 .recipe-clist-unlock {
-      background-color: black;
-      color: white;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       height: 150px;
@@ -616,9 +493,6 @@
       resize: vertical;
 }
 .recipe-clist-unlock-add {
-      background-color: black;
-      color: white;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       font-family: 'Days One', sans-serif;
@@ -632,23 +506,15 @@
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
 }
-.recipe-clist-unlock-add:hover {
-      background-color: white;
-      color: black;
-      border-color: black;
-}
 .recipe-clist-unlock-entry {
       height: 30px;
       width: 100%;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       overflow: hidden;
       font-size: 0;
 }
 .recipe-clist-unlock-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 70%;
       border-width: 0px;
@@ -662,10 +528,7 @@
       padding-right: 3px;
 }
 .recipe-clist-unlock-remove {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       height: 100%;
       width: 30%;
       border-width: 0px;
@@ -679,18 +542,11 @@
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color!important;
 }
-.recipe-clist-unlock-remove:hover {
-      background-color: white;
-      color: black;
-}
 
 /*  */
 .editor-recipe-input {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
       border-width: 1px;
-      border-color: white;
       border-style: solid;
       padding: 3px;
       display: inline;
@@ -700,11 +556,8 @@
 }
 
 .editor-recipe-button {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: white!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -712,19 +565,11 @@
       margin-right: 6px!important;
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
-}
-.editor-recipe-button:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
 }
 
 .editor-recipe-button-important {
-      background-color: white!important;
-      color: black!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: black!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -734,21 +579,13 @@
       transition-property: color,background-color,border-color!important;
 }
 
-.editor-recipe-button-important:hover {
-      background-color: black!important;
-      color: white!important;
-      border-color: white!important;
-}
 
 
 
 
 .editor-customtab-input {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
       border-width: 1px;
-      border-color: white;
       border-style: solid;
       padding: 3px;
       display: inline;
@@ -758,11 +595,8 @@
 }
 
 .editor-customtab-button {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: white!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -770,19 +604,11 @@
       margin-right: 6px!important;
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
-}
-.editor-customtab-button:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
 }
 
 .editor-customtab-button-important {
-      background-color: white!important;
-      color: black!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: black!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -792,17 +618,8 @@
       transition-property: color,background-color,border-color!important;
 }
 
-.editor-customtab-button-important:hover {
-      background-color: black!important;
-      color: white!important;
-      border-color: white!important;
-}
-
 .customtab-clist-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -814,10 +631,7 @@
       padding-right: 3px;
 }
 .customtab-clist-displayname {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -829,10 +643,7 @@
       padding-right: 3px;
 }
 .customtab-clist-sprite {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -844,10 +655,7 @@
       padding-right: 3px;
 }
 .customtab-clist-parentpath {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -860,10 +668,7 @@
 }
 
 .customtab-clist-remove {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
-      border-color: white!important;
       border-width: 1px!important;
       margin-left: 3px;
       border-style: solid!important;
@@ -872,21 +677,13 @@
       -webkit-appearance: textfield!important;
       -moz-appearance: textfield!important;
 }
-.customtab-clist-remove:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
-}
 
 
 
 
 .editor-customsize-input {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
       border-width: 1px;
-      border-color: white;
       border-style: solid;
       padding: 3px;
       display: inline;
@@ -896,11 +693,8 @@
 }
 
 .editor-customsize-button {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: white!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -908,19 +702,11 @@
       margin-right: 6px!important;
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
-}
-.editor-customsize-button:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
 }
 
 .editor-customsize-button-important {
-      background-color: white!important;
-      color: black!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: black!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -930,17 +716,9 @@
       transition-property: color,background-color,border-color!important;
 }
 
-.editor-customsize-button-important:hover {
-      background-color: black!important;
-      color: white!important;
-      border-color: white!important;
-}
 
 .customsize-clist-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -952,10 +730,7 @@
       padding-right: 3px;
 }
 .customsize-clist-width {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -967,10 +742,7 @@
       padding-right: 3px;
 }
 .customsize-clist-height {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -983,10 +755,7 @@
 }
 
 .customsize-clist-remove {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
-      border-color: white!important;
       border-width: 1px!important;
       margin-left: 3px;
       border-style: solid!important;
@@ -995,21 +764,13 @@
       -webkit-appearance: textfield!important;
       -moz-appearance: textfield!important;
 }
-.customsize-clist-remove:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
-}
 
 
 
 
 .editor-custombiofuels-input {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
       border-width: 1px;
-      border-color: white;
       border-style: solid;
       padding: 3px;
       display: inline;
@@ -1019,11 +780,8 @@
 }
 
 .editor-custombiofuels-button {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: white!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -1031,19 +789,11 @@
       margin-right: 6px!important;
       transition: 0.25s ease-in-out!important;
       transition-property: color,background-color,border-color!important;
-}
-.editor-custombiofuels-button:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
 }
 
 .editor-custombiofuels-button-important {
-      background-color: white!important;
-      color: black!important;
       font-family: 'Days One', sans-serif!important;
       border-width: 1px!important;
-      border-color: black!important;
       border-style: solid!important;
       padding: 3px!important;
       display: inline!important;
@@ -1053,17 +803,9 @@
       transition-property: color,background-color,border-color!important;
 }
 
-.editor-custombiofuels-button-important:hover {
-      background-color: black!important;
-      color: white!important;
-      border-color: white!important;
-}
 
 .custombiofuels-clist-id {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -1075,10 +817,7 @@
       padding-right: 3px;
 }
 .custombiofuels-clist-fuel {
-      background-color: black;
-      color: white;
       font-family: 'Days One', sans-serif;
-      border-color: white;
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: textfield;
@@ -1091,10 +830,7 @@
 }
 
 .custombiofuels-clist-remove {
-      background-color: black!important;
-      color: white!important;
       font-family: 'Days One', sans-serif!important;
-      border-color: white!important;
       border-width: 1px!important;
       margin-left: 3px;
       border-style: solid!important;
@@ -1103,12 +839,6 @@
       -webkit-appearance: textfield!important;
       -moz-appearance: textfield!important;
 }
-.custombiofuels-clist-remove:hover {
-      background-color: white!important;
-      color: black!important;
-      border-color: black!important;
-}
-
 
 .input-labler {
       display: inline-block;
@@ -1120,28 +850,4 @@
       margin-right: 3px;
       overflow: hidden;
       width: 100%;
-      color: white;
 }
-
-/* SLIDER */
-.slider {
-      background-color: rgb(20,20,20)!important;
-}
-
-.slider:before {
-      background-color: rgb(120,120,120)!important;
-}
-
-input:checked+.slider {
-      background-color: white!important;
-}
-
-input:checked+.slider:before {
-      background-color: black!important;
-}
-
-input:focus+.slider {
-      box-shadow: 0 0 1px white!important;
-}
-
-/*  */
