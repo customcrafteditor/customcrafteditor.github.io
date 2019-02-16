@@ -4,37 +4,55 @@
 
 <head>
       <title>CustomCraft - Editors</title>
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
+      {% include main-csslist.html %}
+      <script src="{{ site.baseurl }}/scripts/main.js"></script>
       <style>
             .version-header {
-                  font-family: Arial;
-                  color: white;
+                  font-family: 'Days One', sans-serif;
                   font-size: 24px;
                   text-decoration: none;
                   font-weight: bold;
+                  text-align: center;
             }
-
             .version-entry {
-                  font-family: Arial;
-                  color: white;
+                  font-family: 'Days One', sans-serif;
                   font-size: 16px;
                   text-decoration: none;
+                  text-align: center;
+            }
+      </style>
+      <style class="theme-dark">
+            .version-header {
+                  color: white;
+            }
+            .version-entry {
+                  color: white;
+            }
+      </style>
+      <style class="theme-light">
+            .version-header {
+                  color: black;
+            }
+            .version-entry {
+                  color: black;
             }
       </style>
 </head>
 
 <body>
+      {% include navbar.html %}
       <a class="version-header" href="{{ site.baseurl }}/editor/">Latest version</a>
       <br>
       <br>
       <Label class="version-header">CustomCraft 1.6</Label>
       <br>
-      <label class="version-entry">No entry yet</label>
+      <!--<label class="version-entry">No entry yet</label>-->
+      <a class="version-entry" href="{{ site.baseurl }}/editor/1.6.1">v.1.6.1</a>
       <br>
       <br>
       <Label class="version-header">CustomCraft 1.5</Label>
       <br>
-      <a class="version-entry" href="{{ site.baseurl }}/editor/1.5.001">v.1.5.001</a>
+      <a class="version-entry" href="{{ site.baseurl }}/editor/1.5.1">v.1.5.1</a>
 </body>
 <footer>
 
