@@ -1,0 +1,18 @@
+---
+og_title: "QModManager on NexusMods"
+og_type: "website"
+og_url: "/qmmnexus"
+og_description: "QModManager on NexusMods 💙"
+---
+<html>
+
+<head>
+      {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
+      {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
+      <meta http-equiv="refresh" content="1;url=https://www.nexusmods.com/subnautica/mods/16">
+      <script type="text/javascript">
+            window.location.href = "https://www.nexusmods.com/subnautica/mods/16"
+      </script>
+</head>
+
+</html>
