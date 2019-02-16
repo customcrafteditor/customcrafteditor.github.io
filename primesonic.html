@@ -1,0 +1,18 @@
+---
+og_title: "PrimeSonic's Repository"
+og_type: "website"
+og_url: "/primesonic"
+og_description: "The repository of the CustomCraft2 author, PrimeSonic."
+---
+<html>
+
+<head>
+      {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
+      {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
+      <meta http-equiv="refresh" content="1;url=https://github.com/PrimeSonic/PrimeSonicSubnauticaMods">
+      <script type="text/javascript">
+            window.location.href = "https://github.com/PrimeSonic/PrimeSonicSubnauticaMods"
+      </script>
+</head>
+
+</html>
