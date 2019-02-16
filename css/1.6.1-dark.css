@@ -1,0 +1,622 @@
+---
+---
+#code-output {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+
+#code-input {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+
+#modeselector {
+      background-color: black;
+}
+
+/* BUTTON SECTION */
+.button-section {
+      border-color: white;
+}
+
+.button-section>button {
+      background-color: transparent;
+      color: white;
+}
+
+.button-section>button:hover {
+      background-color: white;
+      color: black;
+}
+
+/*  */
+#editor-recipe-ingredient-list {
+      border-color: white;
+}
+#editor-recipe-linked-list {
+      border-color: white;
+}
+#editor-recipe-unlock-list {
+      border-color: white;
+}
+
+/* INGREDIENT LIST */
+.ingredient-list-id {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.ingredient-list-amount {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.ingredient-list-remove {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.ingredient-list-remove:hover {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.ingredient-list-entry {
+      border-bottom-color: white;
+}
+
+/* LINKED LIST */
+.linked-list-id {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.linked-list-remove {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.linked-list-remove:hover {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.linked-list-entry {
+      border-bottom-color: white;
+}
+
+/* UNLOCK LIST */
+.unlock-list-id {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.unlock-list-remove {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.unlock-list-remove:hover {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.unlock-list-entry {
+      border-bottom-color: white;
+}
+
+/*  */
+#editor-recipe-citems-list, #editor-customtab-citems-list, #editor-customsize-citems-list, #editor-custombiofuels-citems-list, #editor-customfragmentcounts-citems-list, #editor-movedrecipes-citems-list {
+      border-color: white;
+}
+
+.recipe-clist-entry, .customtab-clist-entry, .customsize-clist-entry, .custombiofuels-clist-entry, .customfragmentcounts-clist-entry, .movedrecipes-clist-entry {
+      border-bottom-color: white;
+}
+.recipe-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.recipe-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.recipe-clist-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-amount {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-displayname {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-tooltip {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-path {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-pdagroup {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-pdacategory {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-functionalid {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.recipe-clist-ingredients {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-ingredients-add {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-ingredients-add:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-ingredient-entry {
+      border-bottom-color: white;
+}
+.recipe-clist-ingredient-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-ingredient-amount {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-ingredient-remove {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-ingredient-remove:hover {
+      background-color: white;
+      color: black;
+}
+
+.recipe-clist-linked {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-linked-add {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-linked-add:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-linked-entry {
+      border-bottom-color: white;
+}
+.recipe-clist-linked-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-linked-remove {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-linked-remove:hover {
+      background-color: white;
+      color: black;
+}
+
+.recipe-clist-unlock {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-unlock-add {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-unlock-add:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-unlock-entry {
+      border-bottom-color: white;
+}
+.recipe-clist-unlock-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-unlock-remove {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-unlock-remove:hover {
+      background-color: white;
+      color: black;
+}
+
+/*  */
+.editor-recipe-input {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.editor-recipe-button {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.editor-recipe-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-recipe-button-important {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-recipe-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+
+
+
+.editor-customtab-input {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.editor-customtab-button {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.editor-customtab-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-customtab-button-important {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-customtab-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.customtab-clist-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.customtab-clist-displayname {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.customtab-clist-sprite {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.customtab-clist-parentpath {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.customtab-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.customtab-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
+
+
+.editor-customsize-input {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.editor-customsize-button {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.editor-customsize-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-customsize-button-important {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-customsize-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.customsize-clist-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.customsize-clist-width {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.customsize-clist-height {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.customsize-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.customsize-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
+
+
+.editor-custombiofuels-input {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.editor-custombiofuels-button {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.editor-custombiofuels-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-custombiofuels-button-important {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-custombiofuels-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.custombiofuels-clist-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.custombiofuels-clist-fuel {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.custombiofuels-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.custombiofuels-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
+
+
+.editor-customfragmentcounts-input {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.editor-customfragmentcounts-button {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.editor-customfragmentcounts-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-customfragmentcounts-button-important {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-customfragmentcounts-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.customfragmentcounts-clist-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.customfragmentcounts-clist-amount {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.customfragmentcounts-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.customfragmentcounts-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
+
+
+.editor-movedrecipes-input {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.editor-movedrecipes-button {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.editor-movedrecipes-button:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-movedrecipes-button-important {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.editor-movedrecipes-button-important:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.movedrecipes-clist-id {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.movedrecipes-clist-opath {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.movedrecipes-clist-npath {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+
+.movedrecipes-clist-remove {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.movedrecipes-clist-remove:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
+
+
+
+.input-labler-label {
+      color: white;
+}
+
+/* SLIDER */
+.slider {
+      background-color: rgb(20,20,20)!important;
+}
+
+.slider:before {
+      background-color: rgb(120,120,120)!important;
+}
+
+input:checked+.slider {
+      background-color: white!important;
+}
+
+input:checked+.slider:before {
+      background-color: black!important;
+}
+
+input:focus+.slider {
+      box-shadow: 0 0 1px white!important;
+}
+
+/*  */

@@ -1,0 +1,1056 @@
+#code-output {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      width: 100%;
+      height: 50%;
+      resize: vertical;
+      tab-size: 4;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+}
+
+.editor-marginner {
+      padding: 0;
+      margin: 0;
+      margin-left: 10px;
+      margin-right: 10px;
+}
+
+#code-input {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      width: 100%;
+      height: 50%;
+      resize: vertical;
+      tab-size: 4;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+}
+
+/* BUTTON SECTION */
+.button-section {
+      display: inline-block;
+      border-width: 1px;
+      border-radius: 0;
+      border-style: solid;
+}
+
+/*
+.button-section-wrap-l {
+      border: 0px;
+      margin-left: -1px!important;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+}
+
+.button-section-wrap-r {
+      border: 0px;
+      margin-right: -1px!important;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+}
+*/
+.button-section>.button-section-divider {
+      margin: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 0px;
+      border-top: 0px;
+      border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      display: inline;
+      border-style: solid;
+      background-color: transparent;
+}
+
+#modeselector {
+      border-top-width: 0px;
+      width: 100%;
+}
+
+.button-section>button {
+      display: inline-block;
+      border: none;
+      height: 40px;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      vertical-align: middle;
+      font-family: 'Days One', sans-serif;
+      font-size: 16px;
+      transition: 0.25s ease-in-out;
+      transition-property: color,background-color;
+}
+
+
+/*  */
+#editor-recipe-ingredient-list {
+      min-height: 150px;
+      height: 250px;
+      width: 50%;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: vertical;
+      margin-right: 20px;
+}
+#editor-recipe-linked-list {
+      min-height: 150px;
+      height: 250px;
+      width: 50%;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: vertical;
+      margin-right: 20px;
+}
+#editor-recipe-unlock-list {
+      min-height: 150px;
+      height: 250px;
+      width: 50%;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: vertical;
+      margin-right: 20px;
+}
+
+/* INGREDIENT LIST */
+.ingredient-list-id {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 55%;
+      border-width: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin: 0px;
+      display: inline-block;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+}
+.ingredient-list-amount {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 15%;
+      border-width: 0px;
+      border-left-width: 1px;
+      border-right-width: 1px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin: 0px;
+      display: inline-block;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+}
+.ingredient-list-remove {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 30%;
+      border-width: 0px;
+      padding: 0px;
+      margin: 0px;
+      display: inline-block;
+      transition: 0.25s ease-in-out;
+      transition-property: color,background-color;
+}
+.ingredient-list-entry {
+      border-bottom: 2px solid;
+      overflow: hidden;
+      height: 30px;
+      font-size: 0;
+}
+
+/* LINKED LIST */
+.linked-list-id {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 70%;
+      border-width: 0px;
+      border-right-width: 1px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin: 0px;
+      display: inline-block;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+}
+.linked-list-remove {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 30%;
+      border-width: 0px;
+      padding: 0px;
+      margin: 0px;
+      display: inline-block;
+      transition: 0.25s ease-in-out;
+      transition-property: color,background-color;
+}
+.linked-list-entry {
+      border-bottom: 2px solid;
+      overflow: hidden;
+      height: 30px;
+      font-size: 0;
+}
+
+/* UNLOCK LIST */
+.unlock-list-id {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 70%;
+      border-width: 0px;
+      border-right-width: 1px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin: 0px;
+      display: inline-block;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+}
+.unlock-list-remove {
+      font-family: 'Days One', sans-serif;
+      border-style: solid;
+      height: 30px;
+      width: 30%;
+      border-width: 0px;
+      padding: 0px;
+      margin: 0px;
+      display: inline-block;
+      transition: 0.25s ease-in-out;
+      transition-property: color,background-color;
+}
+.unlock-list-entry {
+      border-bottom: 2px solid;
+      overflow: hidden;
+      height: 30px;
+      font-size: 0;
+}
+
+/*  */
+#editor-recipe-citems-list, #editor-customtab-citems-list, #editor-customsize-citems-list, #editor-custombiofuels-citems-list, #editor-customfragmentcounts-citems-list, #editor-movedrecipes-citems-list {
+      min-height: 400px;
+      height: fill;
+      width: 100%;
+      display: inline-block;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: top;
+      resize: vertical;
+}
+
+.recipe-clist-entry, .customtab-clist-entry, .customsize-clist-entry, .custombiofuels-clist-entry, .customfragmentcounts-clist-entry, .movedrecipes-clist-entry {
+      border-bottom: 2px solid;
+      padding-bottom: 5px;
+      padding-top: 5px;
+}
+.recipe-clist-remove {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+.recipe-clist-id {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-amount {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-displayname {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-tooltip {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-path {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-pdagroup {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-pdacategory {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-functionalid {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.recipe-clist-ingredients {
+      border-width: 1px;
+      border-style: solid;
+      height: 150px;
+      width: 35%;
+      display: inline-block;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      vertical-align: top;
+      resize: vertical;
+}
+.recipe-clist-ingredients-add {
+      border-width: 1px;
+      border-style: solid;
+      font-family: 'Days One', sans-serif;
+      height: 30px;
+      margin: 0px;
+      margin-right: 5px;
+      margin-left: 2px;
+      padding: 0px;
+      padding-left: 2px;
+      padding-right: 2px;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+.recipe-clist-ingredient-entry {
+      height: 30px;
+      width: 100%;
+      border-bottom: 2px solid;
+      overflow: hidden;
+      font-size: 0;
+}
+.recipe-clist-ingredient-id {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 50%;
+      border-width: 0px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-ingredient-amount {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 20%;
+      border-width: 0px;
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-ingredient-remove {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 30%;
+      border-width: 0px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color!important;
+}
+
+.recipe-clist-linked {
+      border-width: 1px;
+      border-style: solid;
+      height: 150px;
+      width: 20%;
+      display: inline-block;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      vertical-align: top;
+      resize: vertical;
+}
+.recipe-clist-linked-add {
+      border-width: 1px;
+      border-style: solid;
+      font-family: 'Days One', sans-serif;
+      height: 30px;
+      margin: 0px;
+      margin-right: 5px;
+      margin-left: 2px;
+      padding: 0px;
+      padding-left: 2px;
+      padding-right: 2px;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+.recipe-clist-linked-entry {
+      height: 30px;
+      width: 100%;
+      border-bottom: 2px solid;
+      overflow: hidden;
+      font-size: 0;
+}
+.recipe-clist-linked-id {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 70%;
+      border-width: 0px;
+      border-right-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-linked-remove {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 30%;
+      border-width: 0px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color!important;
+}
+
+.recipe-clist-unlock {
+      border-width: 1px;
+      border-style: solid;
+      height: 150px;
+      width: 20%;
+      display: inline-block;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      vertical-align: top;
+      resize: vertical;
+}
+.recipe-clist-unlock-add {
+      border-width: 1px;
+      border-style: solid;
+      font-family: 'Days One', sans-serif;
+      height: 30px;
+      margin: 0px;
+      margin-right: 5px;
+      margin-left: 2px;
+      padding: 0px;
+      padding-left: 2px;
+      padding-right: 2px;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+.recipe-clist-unlock-entry {
+      height: 30px;
+      width: 100%;
+      border-bottom: 2px solid;
+      overflow: hidden;
+      font-size: 0;
+}
+.recipe-clist-unlock-id {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 70%;
+      border-width: 0px;
+      border-right-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.recipe-clist-unlock-remove {
+      font-family: 'Days One', sans-serif;
+      height: 100%;
+      width: 30%;
+      border-width: 0px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color!important;
+}
+
+/*  */
+.editor-recipe-input {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-recipe-button {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-recipe-button-important {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+
+
+
+
+.editor-customtab-input {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-customtab-button {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-customtab-button-important {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.customtab-clist-id {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.customtab-clist-displayname {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.customtab-clist-sprite {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.customtab-clist-parentpath {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.customtab-clist-remove {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      margin-left: 3px;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+
+
+
+
+.editor-customsize-input {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-customsize-button {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-customsize-button-important {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+
+.customsize-clist-id {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.customsize-clist-width {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.customsize-clist-height {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.customsize-clist-remove {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      margin-left: 3px;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+
+
+
+
+.editor-custombiofuels-input {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-custombiofuels-button {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-custombiofuels-button-important {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+
+.custombiofuels-clist-id {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.custombiofuels-clist-fuel {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.custombiofuels-clist-remove {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      margin-left: 3px;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+
+
+
+
+.editor-customfragmentcounts-input {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-customfragmentcounts-button {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-customfragmentcounts-button-important {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+
+.customfragmentcounts-clist-id {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.customfragmentcounts-clist-amount {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.customfragmentcounts-clist-remove {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      margin-left: 3px;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+
+
+
+
+.editor-movedrecipes-input {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      padding: 3px;
+      display: inline;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 2px;
+}
+
+.editor-movedrecipes-button {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+.editor-movedrecipes-button-important {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      border-style: solid!important;
+      padding: 3px!important;
+      display: inline!important;
+      margin: 2px!important;
+      margin-right: 6px!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+}
+
+
+.movedrecipes-clist-id {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.movedrecipes-clist-opath {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+.movedrecipes-clist-npath {
+      font-family: 'Days One', sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      margin: 0px;
+      margin-right: 2px;
+      padding: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+}
+
+.movedrecipes-clist-remove {
+      font-family: 'Days One', sans-serif!important;
+      border-width: 1px!important;
+      margin-left: 3px;
+      border-style: solid!important;
+      transition: 0.25s ease-in-out!important;
+      transition-property: color,background-color,border-color!important;
+      -webkit-appearance: textfield!important;
+      -moz-appearance: textfield!important;
+}
+
+
+
+
+
+
+
+
+.input-labler {
+      display: inline-block;
+}
+.input-labler-label {
+      display: block;
+      text-align: left;
+      margin-left: 3px;
+      margin-right: 3px;
+      overflow: hidden;
+      width: 100%;
+}

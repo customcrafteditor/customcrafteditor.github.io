@@ -1,0 +1,1053 @@
+<html>
+      <head>
+            <title>CustomCraft - Editor v.1.6.1</title>
+            <link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/main-dark.css" class="theme-dark">
+<link rel="stylesheet" type="text/css" href="/css/main-light.css" class="theme-light">
+<link rel="stylesheet" type="text/css" href="/css/main-ruby.css" class="theme-ruby">
+<link rel="stylesheet" type="text/css" href="/css/slider.css">
+<link rel="stylesheet" type="text/css" href="/css/slider-dark.css" class="theme-dark">
+<link rel="stylesheet" type="text/css" href="/css/slider-light.css" class="theme-light">
+            <link rel="stylesheet" type="text/css" href="/css/1.6.1.css">
+            <link rel="stylesheet" type="text/css" href="/css/1.6.1-dark.css" class="theme-dark">
+            <link rel="stylesheet" type="text/css" href="/css/1.6.1-light.css" class="theme-light">
+            
+            <meta property="og:title" content="Editor v.1.6.1" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000/editor/1.6.1" />
+<meta property="og:description" content="An editor for Custom Craft 2 version 1.6" />
+<meta property="og:site_name" content="CustomCraftEditor" />
+<meta property="og:locale" content="en_US" />
+            <script src="/scripts/1.6.1.js"></script>
+            <script src="/editor/1.6.1.js"></script>
+            <script src="/scripts/main.js"></script>
+            <!--<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+            <script>
+                  window.TrackJS && TrackJS.install({ 
+                        token: "e26750c4a6054763ae196f2a8db5a376",
+                        application: "customcrafteditor"
+                  });
+                  TrackJS.addMetadata("type", "editor");
+                  TrackJS.addMetadata("version", "1.5.001");
+                  TrackJS.addMetadata("ccversion", "1.5");
+                  TrackJS.addMetadata("eversion", "001");
+            </script>-->
+            <style>
+                  
+            </style>
+      </head>
+      <body>
+            <link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/navbar-dark.css" class="theme-dark">
+<link rel="stylesheet" href="/css/navbar-light.css" class="theme-light">
+<link rel="stylesheet" href="/css/navbar-ruby.css" class="theme-ruby">
+<div id="navbar-div"><!--
+--><a id="navbar-title" href="/" target="_top"><span id="navbar-title-l">Custom</span><span id="navbar-title-r">Craft</span></a><!--
+--><nav id="navbar-links"><!--
+      --><a id="navbar-editor" href="/editor/" target="_top">Editor</a><!--
+      --><div class="navbar-sep"></div><!--
+      --><a id="navbar-editorlist" href="/editor/list" target="_top">Other versions</a><!--
+      --><div class="navbar-sep"></div><!--
+      --><a id="navbar-discord" href="/discord" target="_blank"><svg id="navbar-discord-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 272.1"><path d="M142.8 120.1c-5.7 0-10.2 4.9-10.2 11s4.6 11 10.2 11c5.7 0 10.2-4.9 10.2-11s-4.6-11-10.2-11zM106.3 120.1c-5.7 0-10.2 4.9-10.2 11s4.6 11 10.2 11c5.7 0 10.2-4.9 10.2-11 .1-6.1-4.5-11-10.2-11z"/><path d="M191.4 36.9h-134c-11.3 0-20.5 9.2-20.5 20.5v134c0 11.3 9.2 20.5 20.5 20.5h113.4l-5.3-18.3 12.8 11.8 12.1 11.1 21.6 18.7V57.4c-.1-11.3-9.3-20.5-20.6-20.5zm-38.6 129.5s-3.6-4.3-6.6-8c13.1-3.7 18.1-11.8 18.1-11.8-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.4-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.6-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.2-1.8-1-2.8-1.7-2.8-1.7s4.8 7.9 17.5 11.7c-3 3.8-6.7 8.2-6.7 8.2-22.1-.7-30.5-15.1-30.5-15.1 0-31.9 14.4-57.8 14.4-57.8 14.4-10.7 28-10.4 28-10.4l1 1.2c-18 5.1-26.2 13-26.2 13s2.2-1.2 5.9-2.8c10.7-4.7 19.2-5.9 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.5 0 0-7.9-7.5-24.9-12.6l1.4-1.6s13.7-.3 28 10.4c0 0 14.4 25.9 14.4 57.8 0-.1-8.4 14.3-30.5 15zM303.8 79.7h-33.2V117l22.1 19.9v-36.2h11.8c7.5 0 11.2 3.6 11.2 9.4v27.7c0 5.8-3.5 9.7-11.2 9.7h-34v21.1h33.2c17.8.1 34.5-8.8 34.5-29.2v-29.8c.1-20.8-16.6-29.9-34.4-29.9zm174 59.7v-30.6c0-11 19.8-13.5 25.8-2.5l18.3-7.4c-7.2-15.8-20.3-20.4-31.2-20.4-17.8 0-35.4 10.3-35.4 30.3v30.6c0 20.2 17.6 30.3 35 30.3 11.2 0 24.6-5.5 32-19.9l-19.6-9c-4.8 12.3-24.9 9.3-24.9-1.4zM417.3 113c-6.9-1.5-11.5-4-11.8-8.3.4-10.3 16.3-10.7 25.6-.8l14.7-11.3c-9.2-11.2-19.6-14.2-30.3-14.2-16.3 0-32.1 9.2-32.1 26.6 0 16.9 13 26 27.3 28.2 7.3 1 15.4 3.9 15.2 8.9-.6 9.5-20.2 9-29.1-1.8l-14.2 13.3c8.3 10.7 19.6 16.1 30.2 16.1 16.3 0 34.4-9.4 35.1-26.6 1-21.7-14.8-27.2-30.6-30.1zm-67 55.5h22.4V79.7h-22.4v88.8zM728 79.7h-33.2V117l22.1 19.9v-36.2h11.8c7.5 0 11.2 3.6 11.2 9.4v27.7c0 5.8-3.5 9.7-11.2 9.7h-34v21.1H728c17.8.1 34.5-8.8 34.5-29.2v-29.8c0-20.8-16.7-29.9-34.5-29.9zm-162.9-1.2c-18.4 0-36.7 10-36.7 30.5v30.3c0 20.3 18.4 30.5 36.9 30.5 18.4 0 36.7-10.2 36.7-30.5V109c0-20.4-18.5-30.5-36.9-30.5zm14.4 60.8c0 6.4-7.2 9.7-14.3 9.7-7.2 0-14.4-3.1-14.4-9.7V109c0-6.5 7-10 14-10 7.3 0 14.7 3.1 14.7 10v30.3zM682.4 109c-.5-20.8-14.7-29.2-33-29.2h-35.5v88.8h22.7v-28.2h4l20.6 28.2h28L665 138.1c10.7-3.4 17.4-12.7 17.4-29.1zm-32.6 12h-13.2v-20.3h13.2c14.1 0 14.1 20.3 0 20.3z"/></svg></a><!--
+      --><div class="navbar-sep"></div><!--
+      --><a id="navbar-github" href="/github" target="_blank">GitHub <svg xmlns="http://www.w3.org/2000/svg" id="navbar-github-logo" viewBox="0 0 30 30" width="480px" height="480px"><path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg></a><!--
+--></nav><!--
+--></div>
+            <template id="ingredient-list-template">
+                  <div class="ingredient-list-entry">
+                        <input type="text" class="ingredient-list-id" placeholder="ID" list="item-ids-list"></input>
+                        <input type="number" min="0" max="99" class="ingredient-list-amount" placeholder="Amount"></input>
+                        <button class="ingredient-list-remove">Remove</button>
+                  </div>
+            </template>
+            <template id="linked-list-template">
+                  <div class="linked-list-entry">
+                        <input type="text" class="linked-list-id" placeholder="ID" list="item-ids-list"></input>
+                        <button class="linked-list-remove">Remove</button>
+                  </div>
+            </template>
+            <template id="unlock-list-template">
+                  <div class="unlock-list-entry">
+                        <input type="text" class="unlock-list-id" placeholder="ID" list="item-ids-list"></input>
+                        <button class="unlock-list-remove">Remove</button>
+                  </div>
+            </template>
+            <template id="recipe-clist-template">
+                  <div class="recipe-clist-entry">
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="recipe-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-amount-label" class="input-labler-label" type="text">Amount</label><!--
+                                    --><input type="number" min="-1" max="99" class="recipe-clist-amount" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-displayname-label" class="input-labler-label" type="text">Display Name</label><!--
+                                    --><input type="text" class="recipe-clist-displayname" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-tooltip-label" class="input-labler-label" type="text">Tooltip</label><!--
+                                    --><input type="text" class="recipe-clist-tooltip" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-path-label" class="input-labler-label" type="text">Path</label><!--
+                                    --><input type="text" class="recipe-clist-path" placeholder="" list="craftingtabs-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-pdagroup-label" class="input-labler-label" type="text">PDA Group</label><!--
+                                    --><input type="text" class="recipe-clist-pdagroup" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-pdacategory-label" class="input-labler-label" type="text">PDA Category</label><!--
+                                    --><input type="text" class="recipe-clist-pdacategory" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-edit-functionalid-label" class="input-labler-label" type="text">FunctionalID</label><!--
+                                    --><input type="text" class="recipe-clist-functionalid" placeholder=""  list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><br><!--
+                              --><Label>Default ForceUnlock<input class="recipe-clist-forceunlock-default" type="checkbox"></Label><!--
+                              --><Label>Unlocks at Start<input class="recipe-clist-forceunlock" type="checkbox"></Label><!--
+                              --><button class="recipe-clist-remove">Remove</button><!--
+                        --></div></div>
+                        <br>
+                        <br>
+                        <div class="recipe-clist-ingredients"></div>
+                        <button class="recipe-clist-ingredients-add">New Ingredient</button>
+                        <div class="recipe-clist-linked"></div>
+                        <button class="recipe-clist-linked-add">New Linked</button>
+                        <div class="recipe-clist-unlock"></div>
+                        <button class="recipe-clist-unlock-add">New Unlock</button>
+                  </div>
+            </template>
+            <template id="recipe-clist-ingredient-template">
+                  <div class="recipe-clist-ingredient-entry">
+                        <input type="text" class="recipe-clist-ingredient-id" placeholder="ID" list="item-ids-list"><input type="number" min="0" max="99" class="recipe-clist-ingredient-amount" placeholder="Amount"><button class="recipe-clist-ingredient-remove">Remove</button>
+                  </div>
+            </template>
+            <template id="recipe-clist-linked-template">
+                  <div class="recipe-clist-linked-entry">
+                        <input type="text" class="recipe-clist-linked-id" placeholder="ID" list="item-ids-list"></input>
+                        <button class="recipe-clist-linked-remove">Remove</button>
+                  </div>
+            </template>
+            <template id="recipe-clist-unlock-template">
+                  <div class="recipe-clist-unlock-entry">
+                        <input type="text" class="recipe-clist-unlock-id" placeholder="ID" list="item-ids-list"></input>
+                        <button class="recipe-clist-unlock-remove">Remove</button>
+                  </div>
+            </template>
+            <template id="customtab-clist-template">
+                  <div class="customtab-clist-entry">
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="customtab-clist-id" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-displayname-label" class="input-labler-label" type="text">Display Name</label><!--
+                                    --><input type="text" class="customtab-clist-displayname" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-sprite-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
+                                    --><input type="text" class="customtab-clist-sprite" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customtab-edit-parentpath-label" class="input-labler-label" type="text">Parent Path</label><!--
+                                    --><input type="text" class="customtab-clist-parentpath" placeholder="" list="craftingtabs-ids-list"></input><!--
+                              --></div><!--
+                              --><button class="customtab-clist-remove">Remove</button><!--
+                        --></div></div>
+                  </div>
+            </template>
+            <template id="customsize-clist-template">
+                  <div class="customsize-clist-entry">
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customsize-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="customsize-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customsize-edit-width-label" class="input-labler-label" type="text">Width</label><!--
+                                    --><input type="number" class="customsize-clist-width" min="1" max="99" placeholder=""></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customsize-edit-height-label" class="input-labler-label" type="text">Height</label><!--
+                                    --><input type="number" class="customsize-clist-height" min="1" max="99" placeholder=""></input><!--
+                              --></div><!--
+                              --><button class="customsize-clist-remove">Remove</button><!--
+                        --></div></div>
+                  </div>
+            </template>
+            <template id="custombiofuels-clist-template">
+                  <div class="custombiofuels-clist-entry">
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-custombiofuels-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="custombiofuels-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-custombiofuels-edit-height-label" class="input-labler-label" type="text">Energy</label><!--
+                                    --><input type="number" class="custombiofuels-clist-fuel" min="0" placeholder=""></input><!--
+                              --></div><!--
+                              --><button class="custombiofuels-clist-remove">Remove</button><!--
+                        --></div></div>
+                  </div>
+            </template>
+            <template id="customfragmentcounts-clist-template">
+                  <div class="customfragmentcounts-clist-entry">
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customfragmentcounts-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="customfragmentcounts-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-customfragmentcounts-edit-amount-label" class="input-labler-label" type="text">Amount</label><!--
+                                    --><input type="number" class="customfragmentcounts-clist-amount" min="0" max="30" placeholder=""></input><!--
+                              --></div><!--
+                              --><button class="customfragmentcounts-clist-remove">Remove</button><!--
+                        --></div></div>
+                  </div>
+            </template>
+            <template id="movedrecipes-clist-template">
+                  <div class="movedrecipes-clist-entry">
+                        <div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-movedrecipes-edit-id-label" class="input-labler-label" type="text">ID</label><!--
+                                    --><input type="text" class="movedrecipes-clist-id" placeholder="" list="item-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-movedrecipes-edit-opath-label" class="input-labler-label" type="text">Old Path</label><!--
+                                    --><input type="text" class="movedrecipes-clist-opath" placeholder="" list="craftingtabs-ids-list"></input><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-movedrecipes-edit-npath-label" class="input-labler-label" type="text">New Path</label><!--
+                                    --><input type="text" class="movedrecipes-clist-npath" placeholder="" list="craftingtabs-ids-list"></input><!--
+                              --></div><!--
+                              --><Label>Default Hidden<input class="movedrecipes-clist-hidden-default" type="checkbox"></Label><!--
+                              --><Label>Hidden<input class="movedrecipes-clist-hidden" type="checkbox"></Label><!--
+                              --><button class="movedrecipes-clist-remove">Remove</button><!--
+                        --></div></div>
+                  </div>
+            </template>
+            <div class="editor-marginner">
+                  <div id="output-mode">Output</div>
+                  <textarea id="code-output" placeholder="Output" readonly="readonly"></textarea><!--
+                  --><div style="text-align: center"><div class="button-section" id="modeselector" ><!--
+                        --><button id="help-me" class="button-section-wrap-l">Help (Not implemented)</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="copy-output">Copy output</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="editor-reset" class="button-section-wrap-r">Reset</button><!--
+                        --><div style="display: inline-flex; width: 20px"></div><!--
+                        --><button id="editor-change-toggle">Toggle between Add and Edit</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="editor-input-toggle">Toggle Input (Import / Load)</button><!--
+                        --><br><!--
+                        --><button id="change-to-nothing" class="button-section-wrap-l">Unselect Mode</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-added">AddedRecipe</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-modified">ModifiedRecipe</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-alias">AliasRecipe</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-customtab">CustomCraftingTab</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-customsizes">CustomSizes</button><!--
+                        --><div class="button-section-divider"></div><!--
+                        --><button id="change-to-custombiofuels">CustomBioFuels</button><!--
+                        --><button id="change-to-customfragmentcounts">CustomFragmentCounts</button><!--
+                        --><button id="change-to-moved" class="button-section-wrap-r">MovedRecipes</button><!--
+                  --></div></div>
+                  <br>
+                  <br>
+                  <div id="editor-input" hidden="hidden">
+                        <textarea id="code-input" placeholder="Input"></textarea>
+                        <button id="load-input">Load</button>
+                        <label>Loading erases all current data!</label>
+                        <br>
+                  </div>
+                  <div id="editor-recipe" hidden="hidden">
+                        <div class="editor-add"><!--
+                        --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-id-label" class="input-labler-label" type="text">Item ID</label><!--
+                                    --><input id="editor-recipe-add-id" class="editor-recipe-input" type="text" placeholder="" list="item-ids-list"><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-amount-label" class="input-labler-label" type="text">Amount</label><!--
+                                    --><input id="editor-recipe-add-amount" class="editor-recipe-input" type="number" min="-1" max="99" placeholder="" value="0"><!--
+                              --></div><!--
+                              --><div class="input-labler" style="margin-left: 3px;margin-right: 3px;"><!--
+                                    --><label id="editor-recipe-add-path-label" class="input-labler-label" type="text">Default Force Unlock</label><!--
+                                    --><label class="switch">
+                                          <input id="editor-recipe-add-forceunlock-default" type="checkbox" checked="checked">
+                                          <span class="slider"></span>
+                                    </label><!--
+                              --></div><!--
+                              --><div class="input-labler" style="margin-left: 3px;margin-right: 3px;"><!--
+                                    --><label id="editor-recipe-add-path-label" class="input-labler-label" type="text">Force Unlock</label><!--
+                                    --><label class="switch">
+                                          <input id="editor-recipe-add-forceunlock" type="checkbox" checked="checked">
+                                          <span class="slider"></span>
+                                    </label><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-path-label" class="input-labler-label" type="text">Path</label><!--
+                                    --><input id="editor-recipe-add-path" class="editor-recipe-input" type="text" placeholder="" list="craftingtabs-ids-list"><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-display-label" class="input-labler-label" type="text">Display Name</label><!--
+                                    --><input id="editor-recipe-add-display" class="editor-recipe-input" type="text" placeholder=""><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Tooltip</label><!--
+                                    --><input id="editor-recipe-add-tooltip" class="editor-recipe-input" type="text" placeholder=""><!--
+                              --></div><!--
+                              --><br><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-pdagroup-label" class="input-labler-label" type="text">PDA Group</label><!--
+                                    --><input id="editor-recipe-add-pdagroup" class="editor-recipe-input" type="text" placeholder=""><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-pdacategory-label" class="input-labler-label" type="text">PDA Category</label><!--
+                                    --><input id="editor-recipe-add-pdacategory" class="editor-recipe-input" type="text" placeholder=""><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-functionalid-label" class="input-labler-label" type="text">FunctionalID</label><!--
+                                    --><input id="editor-recipe-add-functionalid" class="editor-recipe-input" type="text" placeholder="" list="item-ids-list"><!--
+                              --></div><!--
+                              --><button id="editor-recipe-add-confirm" class="editor-recipe-button-important">Add a recipe</button><!--
+                        --></div></div><!--
+                        --><br><!--
+                        --><br><!--
+                        --><br><!--
+                        --><div style="text-align: left"><div class="button-section" style="border-width: 0px;width: 100%;background-color: transparent;"><!--
+                              --><div id="editor-recipe-ingredient-list"><!--
+                              --></div><!--
+                              --><button id="editor-recipe-add-ingredient-confirm" class="editor-recipe-button">Add Ingredient</button><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Ingredient ID</label><!--
+                                    --><input id="editor-recipe-add-ingredient-id" class="editor-recipe-input" type="text" placeholder="" list="item-ids-list"><!--
+                              --></div><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Amount</label><!--
+                                    --><input id="editor-recipe-add-ingredient-amount" class="editor-recipe-input" type="number" min="-1" max="99" placeholder="" value="1"><!--
+                              --></div><!--
+                              --><br><!--
+                              --><div id="editor-recipe-linked-list"><!--
+                              --></div><!--
+                              --><button id="editor-recipe-add-linked-confirm" class="editor-recipe-button">Add Linked</button><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Linked ID</label><!--
+                                    --><input id="editor-recipe-add-linked-id" class="editor-recipe-input" type="text" placeholder="" list="item-ids-list"><!--
+                              --></div><!--
+                              --><br><!--
+                              --><div id="editor-recipe-unlock-list"><!--
+                              --></div><!--
+                              --><button id="editor-recipe-add-unlock-confirm" class="editor-recipe-button">Add Unlock</button><!--
+                              --><div class="input-labler"><!--
+                                    --><label id="editor-recipe-add-tooltip-label" class="input-labler-label" type="text">Unlock ID</label><!--
+                                    --><input id="editor-recipe-add-unlock-id" type="text" class="editor-recipe-input" placeholder="" list="item-ids-list"><!--
+                              --></div><!--
+                        --></div></div>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-recipe-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-customtab" hidden="hidden">
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-customtab-add-id" class="editor-customtab-input" type="text" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">Display Name</label><!--
+                                          --><input id="editor-customtab-add-display" class="editor-customtab-input" type="text" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">Sprite ItemID</label><!--
+                                          --><input id="editor-customtab-add-spriteitemid" class="editor-customtab-input" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customtab-add-tooltip-label" class="input-labler-label" type="text">Parent Path</label><!--
+                                          --><input id="editor-customtab-add-parentpath" type="text" class="editor-customtab-input" placeholder="" list="craftingtabs-ids-list"><!--
+                                    --></div><!--
+                                    --><button id="editor-customtab-add-confirm" class="editor-customtab-button-important">Add a Tab</button><!--
+                              --></div></div>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-customtab-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-customsize" hidden="hidden">
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customsize-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-customsize-add-id" class="editor-customsize-input" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customsize-add-tooltip-label" class="input-labler-label" type="text">Width</label><!--
+                                          --><input id="editor-customsize-add-width" class="editor-customsize-input" type="number" min="1" max="99" value="1" placeholder=""><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customsize-add-tooltip-label" class="input-labler-label" type="text">Height</label><!--
+                                          --><input id="editor-customsize-add-height" class="editor-customsize-input" type="number" min="1" max="99" value="1" placeholder=""><!--
+                                    --></div><!--
+                                    --><button id="editor-customsize-add-confirm" class="editor-customsize-button-important">Add a Size</button><!--
+                              --></div></div>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-customsize-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-custombiofuels" hidden="hidden">
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-custombiofuels-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-custombiofuels-add-id" class="editor-custombiofuels-input" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-custombiofuels-add-fuel-label" class="input-labler-label" type="text">Energy</label><!--
+                                          --><input id="editor-custombiofuels-add-fuel" class="editor-custombiofuels-input" type="number" min="0" value="0" placeholder=""><!--
+                                    --></div><!--
+                                    --><button id="editor-custombiofuels-add-confirm" class="editor-custombiofuels-button-important">Add a BioFuel</button><!--
+                              --></div></div>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-custombiofuels-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-customfragmentcounts" hidden="hidden">
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customfragmentcounts-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-customfragmentcounts-add-id" class="editor-customfragmentcounts-input" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-customfragmentcounts-add-amount-label" class="input-labler-label" type="text">Amount</label><!--
+                                          --><input id="editor-customfragmentcounts-add-amount" class="editor-customfragmentcounts-input" type="number" min="0" max="30" value="0" placeholder=""><!--
+                                    --></div><!--
+                                    --><button id="editor-customfragmentcounts-add-confirm" class="editor-customfragmentcounts-button-important">Add a FragmentCount</button><!--
+                              --></div></div>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-customfragmentcounts-citems-list">
+                              </div>
+                        </div>
+                  </div>
+                  <div id="editor-movedrecipes" hidden="hidden">
+                        <div class="editor-add"><!--
+                              --><div style="text-align: center"><div class="button-section" style="border-width: 0px;width: 100%;"><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-movedrecipes-add-id-label" class="input-labler-label" type="text">ID</label><!--
+                                          --><input id="editor-movedrecipes-add-id" class="editor-movedrecipes-input" type="text" placeholder="" list="item-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-movedrecipes-add-opath-label" class="input-labler-label" type="text">Old Path</label><!--
+                                          --><input id="editor-movedrecipes-add-opath" class="editor-movedrecipes-input" type="text" placeholder="" list="craftingtabs-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler"><!--
+                                          --><label id="editor-movedrecipes-add-npath-label" class="input-labler-label" type="text">New Path</label><!--
+                                          --><input id="editor-movedrecipes-add-npath" class="editor-movedrecipes-input" type="text" placeholder="" list="craftingtabs-ids-list"><!--
+                                    --></div><!--
+                                    --><div class="input-labler" style="margin-left: 3px;margin-right: 3px;"><!--
+                                          --><label id="editor-movedrecipes-add-hiddendefault-label" class="input-labler-label" type="text">Hidden Default</label><!--
+                                          --><label class="switch">
+                                                <input id="editor-movedrecipes-add-hiddendefault" type="checkbox" checked="checked">
+                                                <span class="slider"></span>
+                                          </label><!--
+                                    --></div><!--
+                                    --><div class="input-labler" style="margin-left: 3px;margin-right: 3px;"><!--
+                                          --><label id="editor-movedrecipes-add-hidden-label" class="input-labler-label" type="text">Hidden</label><!--
+                                          --><label class="switch">
+                                                <input id="editor-movedrecipes-add-hidden" type="checkbox" checked="">
+                                                <span class="slider"></span>
+                                          </label><!--
+                                    --></div><!--
+                                    --><button id="editor-movedrecipes-add-confirm" class="editor-movedrecipes-button-important">Add a MovedRecipe</button><!--
+                              --></div></div>
+                        </div>
+                        <div class="editor-change">
+                              <div id="editor-movedrecipes-citems-list">
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+
+            <datalist id="item-ids-list">
+                  <!-- BASIC MATERIALS -->
+                  <option>titanium</option>
+                  <option>titaniumingot</option>
+                  <option>fibermesh</option>
+                  <option>silicone</option>
+                  <option>aluminumoxide</option>
+                  <option>glass</option>
+                  <option>bleach</option>
+                  <option>lubricant</option>
+                  <option>enameledglass</option>
+                  <option>plasteelingot</option>
+                  <!-- ADVANCED MATERIALS -->
+                  <option>hydrochloricacid</option>
+                  <option>benzene</option>
+                  <option>aramidfibers</option>
+                  <option>aerogel</option>
+                  <option>polyaniline</option>
+                  <!-- ELECTRONICS -->
+                  <option>copperwire</option>
+                  <option>battery</option>
+                  <option>powercell</option>
+                  <option>computerchip</option>
+                  <option>wiringkit</option>
+                  <option>advancedwiringkit</option>
+                  <option>reactorrod</option>
+                  <!-- WATER -->
+                  <option>filteredwater</option>
+                  <option>disinfectedwater</option>
+                  <!-- COOKED FOOD -->
+                  <option>cookedholefish</option>
+                  <option>cookedpeeper</option>
+                  <option>cookedbladderfish</option>
+                  <option>cookedgarryfish</option>
+                  <option>cookedhoverfish</option>
+                  <option>cookedreginald</option>
+                  <option>cookedspadefish</option>
+                  <option>cookedboomerang</option>
+                  <option>cookedlavaboomerang</option>
+                  <option>cookedeyeye</option>
+                  <option>cookedlavaeyeye</option>
+                  <option>cookedoculus</option>
+                  <option>cookedhoopfish</option>
+                  <option>cookedspinefish</option>
+                  <!-- CURED FOOD -->
+                  <option>curedholefish</option>
+                  <option>curedpeeper</option>
+                  <option>curedbladderfish</option>
+                  <option>curedgarryfish</option>
+                  <option>curedhoverfish</option>
+                  <option>curedreginald</option>
+                  <option>curedspadefish</option>
+                  <option>curedboomerang</option>
+                  <option>curedlavaboomerang</option>
+                  <option>curedeyeye</option>
+                  <option>curedlavaeyeye</option>
+                  <option>curedoculus</option>
+                  <option>curedhoopfish</option>
+                  <option>curedspinefish</option>
+                  <!-- EQUIPMENT -->
+                  <option>tank</option>
+                  <option>fins</option>
+                  <option>radiationsuit</option>
+                  <option>radiationgloves</option>
+                  <option>radiationhelmet</option>
+                  <option>reinforceddivesuit</option>
+                  <option>stillsuit</option>
+                  <option>firstaidkit</option>
+                  <option>fireextinguisher</option>
+                  <option>rebreather</option>
+                  <option>compass</option>
+                  <option>pipe</option>
+                  <option>pipesurfacefloater</option>
+                  <!-- TOOLS -->
+                  <option>scanner</option>
+                  <option>welder</option>
+                  <option>flashlight</option>
+                  <option>knife</option>
+                  <option>divereel</option>
+                  <option>airbladder</option>
+                  <option>flare</option>
+                  <option>builder</option>
+                  <option>lasercutter</option>
+                  <option>stasisrifle</option>
+                  <option>propulsioncannon</option>
+                  <option>ledlight</option>
+                  <option>transfuser</option>
+                  <!-- DEPLOYABLES -->
+                  <option>seaglide</option>
+                  <option>constructor</option>
+                  <option>beacon</option>
+                  <option>smallstorage</option>
+                  <option>gravsphere</option>
+                  <!-- SUBMARINE -->
+                  <option>cyclopshullmodule1</option>
+                  <!-- VEHICLES -->
+                  <option>seamoth</option>
+                  <option>cyclops</option>
+                  <option>exosuit</option>
+                  <!-- ROCKET-->
+                  <option>rocketbase</option>
+                  <!-- BATTERY UPGRADES -->
+                  <option>lithiumionbattery</option>
+                  <!-- SURVIVAL KNIFE -->
+                  <option>heatblade</option>
+                  <!-- STANDARD O2 TANK -->
+                  <option>plasteeltank</option>
+                  <option>highcapacitytank</option>
+                  <!-- FINS -->
+                  <option>ultraglidefins</option>
+                  <option>swimchargefins</option>
+                  <!-- PROPULSION CANNON -->
+                  <option>repulsioncannon</option>
+                  <!-- CYCLOPS UPGRADES -->
+                  <option>cyclopshullmodule2</option>
+                  <option>cyclopsfiresuppressionmodule</option>
+                  <!-- SEAMOTH UPGRADES -->
+                  <option>vehiclehullmodule2</option>
+                  <option>vehiclehullmodule3</option>
+                  <!-- COMMON MODULES -->
+                  <option>vehiclehullmodule1</option>
+                  <option>vehiclearmorplating</option>
+                  <option>vehiclepowerupgrademodule</option>
+                  <option>vehiclestoragemodule</option>
+                  <option>LootSensorMetal</option>
+                  <option>LootSensorLithium</option>
+                  <option>LootSensorFragment</option>
+                  <!-- SEAMOTH MODULES -->
+                  <option>seamothsolarcharge</option>
+                  <option>seamothelectricaldefense</option>
+                  <option>seamothtorpedomodule</option>
+                  <option>seamothsonarmodule</option>
+                  <!-- PRAWN SUIT MODULES -->
+                  <option>exosuitthermalreactormodule</option>
+                  <option>exosuitjetupgrademodule</option>
+                  <option>exosuitpropulsionarmmodule</option>
+                  <option>exosuitgrapplingarmmodule</option>
+                  <option>exosuitdrillarmmodule</option>
+                  <option>exosuittorpedoarmmodule</option>
+                  <!-- TORPEDOES -->
+                  <option>whirlpooltorpedo</option>
+                  <option>gastorpedo</option>
+                  <!-- BASE PIECES -->
+                  <option>basefoundation</option>
+                  <option>basecorridor</option>
+                  <option>basecorridorl</option>
+                  <option>basecorridort</option>
+                  <option>basecorridorx</option>
+                  <option>basecorridorglassi</option>
+                  <option>basecorridorglassl</option>
+                  <option>baseconnector</option>
+                  <option>baseroom</option>
+                  <option>basemaproom</option>
+                  <option>basemoonpool</option>
+                  <option>baseobservatory</option>
+                  <option>basehatch</option>
+                  <option>basewindow</option>
+                  <option>basereinforcement</option>
+                  <!-- EXTERIOR MODULES -->
+                  <option>solarpanel</option>
+                  <option>thermalplant</option>
+                  <option>powertransmitter</option>
+                  <option>techlight</option>
+                  <option>spotlight</option>
+                  <option>farmingtray</option>
+                  <option>basepipeconnector</option>
+                  <!-- INTERIOR PIECES -->
+                  <option>baseladder</option>
+                  <option>basefiltrationmachine</option>
+                  <option>basebulkhead</option>
+                  <option>baseupgradeconsole</option>
+                  <option>basebioreactor</option>
+                  <option>basenuclearreactor</option>
+                  <option>basewaterpark</option>
+                  <!-- INTERIOR MODULES -->
+                  <option>fabricator</option>
+                  <option>radio</option>
+                  <option>medicalcabinet</option>
+                  <option>smalllocker</option>
+                  <option>locker</option>
+                  <option>batterycharger</option>
+                  <option>powercellcharger</option>
+                  <option>aquarium</option>
+                  <option>workbench</option>
+                  <option>planterpot</option>
+                  <option>planterpot2</option>
+                  <option>planterpot3</option>
+                  <option>planterbox</option>
+                  <option>plantershelf</option>
+                  <!-- MISCELLANEOUS -->
+                  <option>bench</option>
+                  <option>bed1</option>
+                  <option>bed2</option>
+                  <option>narrowbed</option>
+                  <option>starshipdesk</option>
+                  <option>starshipchair</option>
+                  <option>starshipchair2</option>
+                  <option>starshipchair3</option>
+                  <option>sign</option>
+                  <option>pictureframe</option>
+                  <option>bartable</option>
+                  <option>trashcans</option>
+                  <option>labtrashcan</option>
+                  <option>vendingmachine</option>
+                  <option>labcounter</option>
+                  <option>baseplanter</option>
+                  <option>singlewallshelf</option>
+                  <option>wallshelves</option>
+                  <!-- SCANNER ROOM FABRICATOR -->
+                  <option>maproomhudchip</option>
+                  <option>maproomcamera</option>
+                  <option>maproomupgradescanrange</option>
+                  <option>maproomupgradescanspeed</option>
+                  <!-- BYPRODUCTS -->
+                  <option>stillsuitwater</option>
+                  <option>bigfilteredwater</option>
+                  <option>depletedreactorrod</option>
+                  <!-- FRAGMENTS -->
+                  <option>baseroomfragment</option>
+                  <option>baseobservatoryfragment</option>
+                  <option>basemaproomfragment</option>
+                  <option>moonpoolfragment</option>
+                  <option>powertransmitterfragment</option>
+                  <option>solarpanelfragment</option>
+                  <option>thermalplantfragment</option>
+                  <option>basewaterparkfragment</option>
+                  <!--<option>basefiltrationmachine</option>-->
+                  <option>baseupgradeconsolefragment</option>
+                  <option>basebulkheadfragment</option>
+                  <option>bioreactorfragment</option>
+                  <option>nuclearreactorfragment</option>
+                  <option>workbenchfragment</option>
+                  <option>powercellchargerfragment</option>
+                  <option>batterychargerfragment</option>
+                  <option>stillsuitfragment</option>
+                  <option>reinforceddivesuitfragment</option>
+                  <option>stasisriflefragment</option>
+                  <option>propulsioncannonfragment</option>
+                  <option>ledlightfragment</option>
+                  <option>transfuserfragment</option>
+                  <option>seaglidefragment</option>
+                  <option>constructorfragment</option>
+                  <option>seamothfragment</option>
+                  <option>exosuitfragment</option>
+                  <option>cyclopsbridgefragment</option>
+                  <option>cyclopshullfragment</option>
+                  <option>cyclopsenginefragment</option>
+                  <option>reinfrocedhullfragment</option>
+                  <option>exosuittorpedoarmfragment</option>
+                  <option>exosuitgrapplingarmfragment</option>
+                  <option>exosuitdrillarmfragment</option>
+                  <option>exosuitpropulsionarmfragment</option>
+                  <!-- PLACEABLE ITEMS -->
+                  <option>coffeevendingmachine</option>
+                  <option>labequipment1</option>
+                  <option>labequipment2</option>
+                  <option>labequipment3</option>
+                  <option>luggagebag</option>
+                  <option>poster</option>
+                  <option>posterexosuit1</option>
+                  <option>posterexosuit2</option>
+                  <option>posterkitty</option>
+                  <option>posteraurora</option>
+                  <option>starshipsouvenir</option>
+                  <option>arcadegorgetoy</option>
+                  <option>cap1</option>
+                  <option>cap2</option>
+                  <option>labcontainer</option>
+                  <option>labcontainer2</option>
+                  <option>labcontainer3</option>
+                  <!-- MATERIALS -->
+                  <!--<option>aluminumoxide</option>-->
+                  <option>enzymecureball</option>
+                  <option>copper</option>
+                  <option>crashpowder</option>
+                  <option>diamond</option>
+                  <option>gold</option>
+                  <option>gaspod</option>
+                  <option>kyanite</option>
+                  <option>lead</option>
+                  <option>lithium</option>
+                  <option>magnetite</option>
+                  <option>scrapmetal</option>
+                  <option>mercuryore</option>
+                  <option>quartz</option>
+                  <option>salt</option>
+                  <option>seatreaderpoop</option>
+                  <option>silver</option>
+                  <option>stalkertooth</option>
+                  <option>sulphur</option>
+                  <option>uraninitecrystal</option>
+                  <!-- LARGE RESOURCE DEPOSITS -->
+                  <option>drillablecopper</option>
+                  <option>drillablediamond</option>
+                  <option>drillablegold</option>
+                  <option>drillablekyanite</option>
+                  <option>drillablelead</option>
+                  <option>drillablelithium</option>
+                  <option>drillablemagnetite</option>
+                  <option>drillablequartz</option>
+                  <option>drillablesalt</option>
+                  <option>drillablesilver</option>
+                  <option>drillabletitanium</option>
+                  <option>drillableuraninite</option>
+                  <!-- HARVESTING NODE -->
+                  <option>limestonechunk</option>
+                  <option>sandstonechunk</option>
+                  <option>shalechunk</option>
+                  <!-- SAMPLES -->
+                  <option>jeweleddiskpiece</option>
+                  <option>treemushroompiece</option>
+                  <option>purplebraincoralpiece</option>
+                  <option>coralchunk</option>
+                  <!-- CARNIVORES -->
+                  <option>shocker</option>
+                  <option>biter</option>
+                  <option>blighter</option>
+                  <option>boneshark</option>
+                  <option>crabsnake</option>
+                  <option>crabsquid</option>
+                  <option>crash</option>
+                  <option>lavalizard</option>
+                  <option>mesmer</option>
+                  <option>reaperleviathan</option>
+                  <option>seadragon</option>
+                  <option>sandshark</option>
+                  <option>stalker</option>
+                  <option>warper</option>
+                  <!-- HERBIVORES -->
+                  <option>bladderfish</option>
+                  <option>boomerang</option>
+                  <option>ghostrayred</option>
+                  <option>cutefish</option>
+                  <option>eyeye</option>
+                  <option>garryfish</option>
+                  <option>gasopod</option>
+                  <option>ghostrayblue</option>
+                  <option>holefish</option>
+                  <option>hoopfish</option>
+                  <option>hoverfish</option>
+                  <option>jellyray</option>
+                  <option>lavaboomerang</option>
+                  <option>oculus</option>
+                  <option>peeper</option>
+                  <option>rabbitray</option>
+                  <option>lavaeyeye</option>
+                  <option>reefback</option>
+                  <option>reginald</option>
+                  <option>seatreader</option>
+                  <option>spadefish</option>
+                  <option>spinefish</option>
+                  <!-- SCAVENGERS AND PARASITES -->
+                  <option>bleeder</option>
+                  <option>shuttlebug</option>
+                  <option>cavecrawler</option>
+                  <option>floater</option>
+                  <option>lavalarva</option>
+                  <option>rockgrub</option>
+                  <option>jumper</option>
+                  <!-- EGGS -->
+                  <option>shockeregg</option>
+                  <option>bonesharkegg</option>
+                  <option>crabsnakeegg</option>
+                  <option>crashegg</option>
+                  <option>gasopodegg</option>
+                  <option>jellyrayegg</option>
+                  <option>mesmeregg</option>
+                  <option>rabbitrayegg</option>
+                  <option>reefbackegg</option>
+                  <option>sandsharkegg</option>
+                  <option>jumperegg</option>
+                  <option>spadefishegg</option>
+                  <option>stalkeregg</option>
+                  <!-- PLANTS -->
+                  <option>acidmushroom</option>
+                  <option>bloodroot</option>
+                  <option>bloodgrass</option>
+                  <option>bloodvine</option>
+                  <option>bluepalm</option>
+                  <option>bulbotree</option>
+                  <option>purplebranches</option>
+                  <option>purplevegetableplant</option>
+                  <option>crashhome</option>
+                  <option>whitemushroom</option>
+                  <option>hangingstinger</option>
+                  <option>eyesplant</option>
+                  <option>fernpalm</option>
+                  <option>redrollplant</option>
+                  <option>gabesfeather</option>
+                  <option>jellyplant</option>
+                  <option>redgreententacle</option>
+                  <option>greengrass</option>
+                  <option>covetree</option>
+                  <option>bluecluster</option>
+                  <option>orangepetalsplant</option>
+                  <option>orangemushroom</option>
+                  <option>snakemushroom</option>
+                  <option>smallkoosh</option>
+                  <option>mediumkoosh</option>
+                  <option>largekoosh</option>
+                  <option>hugekoosh</option>
+                  <option>hangingfruittree</option>
+                  <option>melon</option>
+                  <option>smallmelon</option>
+                  <option>membraintree</option>
+                  <option>purplevaseplant</option>
+                  <option>mohawk</option>
+                  <option>pinkmushroom</option>
+                  <option>smallfanseed</option>
+                  <option>redbush</option>
+                  <option>redconeplantseed</option>
+                  <option>redbasketplantseed</option>
+                  <option>seacrownseed</option>
+                  <option>purplerattle</option>
+                  <option>shellgrass</option>
+                  <option>spottedleavesplant</option>
+                  <option>greenreeds</option>
+                  <option>spikeplant</option>
+                  <option>barnaclesuckers</option>
+                  <option>purplefan</option>
+                  <option>purplestalk</option>
+                  <option>pinkflower</option>
+                  <option>purpletentacle</option>
+                  <!-- SEEDS AND SPORES -->
+                  <option>acidmushroomspore</option>
+                  <option>bloodoil</option>
+                  <option>bluepalmseed</option>
+                  <option>purplebranchesseed</option>
+                  <option>creepvinepiece</option>
+                  <option>creepvineseedcluster</option>
+                  <option>whitemushroomspore</option>
+                  <option>eyesplantseed</option>
+                  <option>redrollplantseed</option>
+                  <option>gabesfeatherseed</option>
+                  <option>jellyplantseed</option>
+                  <option>redgreententacleseed</option>
+                  <option>snakemushroomspore</option>
+                  <option>kooshchunk</option>
+                  <option>membraintreeseed</option>
+                  <option>smallfanseed</option>
+                  <option>redbushseed</option>
+                  <option>redconeplantseed</option>
+                  <option>redbasketplantseed</option>
+                  <option>seacrownseed</option>
+                  <option>shellgrassseed</option>
+                  <option>spottedleavesplantseed</option>
+                  <option>spikeplantseed</option>
+                  <option>purplefanseed</option>
+                  <option>purplestalkseed</option>
+                  <option>purpletentacleseed</option>
+                  <option>bulbotreepiece</option>
+                  <option>purplevegetable</option>
+                  <option>fernpalmseed</option>
+                  <option>orangepetalsplantseed</option>
+                  <option>orangemushroomspore</option>
+                  <option>hangingfruit</option>
+                  <option>melonseed</option>
+                  <option>purplevaseplantseed</option>
+                  <option>pinkmushroomspore</option>
+                  <option>purplerattlespore</option>
+                  <option>pinkflowerseed</option>
+                  <!-- MISC -->
+                  <option>bloom</option>
+                  <option>precursorkey_red</option>
+                  <option>precursorkey_blue</option>
+                  <option>precursorkey_orange</option>
+                  <option>precursorkey_white</option>
+                  <option>precursorkey_purple</option>
+                  <option>precursorkeys</option>
+                  <option>hatchingenzymes</option>
+                  <option>precursorioncrystal</option>
+                  <option>spineeel</option>
+                  <option>seaemperor</option>
+                  <option>seaemperorbaby</option>
+                  <option>hoopfishschool</option>
+                  <option>skyray</option>
+                  <option>grandreefsegg</option>
+                  <option>grassyplateausegg</option>
+                  <option>kelpforestegg</option>
+                  <option>kooshzoneegg</option>
+                  <option>lavazoneegg</option>
+                  <option>mushroomforestegg</option>
+                  <option>safeshallowsegg</option>
+                  <option>twistybridgesegg</option>
+                  <option>nanowires</option>
+                  <option>aminoacids</option>
+                  <option>opalgem</option>
+                  <option>nutrientblock</option>
+                  <option>powerupgrademodule</option>
+                  <!--  -->
+            </datalist>
+            <datalist id="craftingtabs-ids-list">
+                  <option value="Constructor">constructor</option>
+
+                  <option value="Constructor/Vehicles">constructor/vehicles</option>
+
+                  <option value="Constructor/Rocket">constructor/vehicles</option>
+
+                  <option value="CyclopsFabricator">cyclopsfabricator</option>
+
+                  <option value="Fabricator">fabricator</option>
+
+                  <option value="Fabricator/Resources">fabricator/resources</option>
+
+                  <option value="Fabricator/Resources/BasicMaterials">fabricator/resources/basicmaterials</option>
+
+                  <option value="Fabricator/Resources/AdvancedMaterials">fabricator/resources/advancedmaterials</option>
+
+                  <option value="Fabricator/Resources/Electronics">fabricator/resources/electronics</option>
+
+                  <option value="Fabricator/Survival">fabricator/survival</option>
+
+                  <option value="Fabricator/Survival/Water">fabricator/survival/water</option>
+
+                  <option value="Fabricator/Survival/CookedFood">fabricator/survival/cookedfood</option>
+
+                  <option value="Fabricator/Survival/CuredFood">fabricator/survival/curedfood</option>
+
+                  <option value="Fabricator/Personal">fabricator/personal</option>
+
+                  <option value="Fabricator/Personal/Equipment">fabricator/personal/equipment</option>
+
+                  <option value="Fabricator/Personal/Tools">fabricator/personal/tools</option>
+
+                  <option value="Fabricator/Machines">fabricator/machines</option>
+
+                  <option value="MapRoom">maproom</option>
+
+                  <option value="SeamothUpgrades">seamothupgrades</option>
+
+                  <option value="SeamothUpgrades/CommonModules">seamothupgrades/commonmodules</option>
+
+                  <option value="SeamothUpgrades/SeamothModules">seamothupgrades/seamothmodules</option>
+
+                  <option value="SeamothUpgrades/ExosuitModules">seamothupgrades/exosuitmodules</option>
+
+                  <option value="Workbench">workbench</option>
+
+                  <option value="Workbench/KnifeMenu">workbench/knifemenu</option>
+
+                  <option value="Workbench/TankMenu">workbench/tankmenu</option>
+
+                  <option value="Workbench/FinsMenu">workbench/finsmenu</option>
+
+                  <option value="Workbench/PropulsionCannonMenu">workbench/propulsioncannonmenu</option>
+
+                  <option value="Workbench/CyclopsMenu">workbench/cyclopsmenu</option>
+
+                  <option value="Workbench/SeamothMenu">workbench/seamothmenu</option>
+
+                  <option value="Workbench/ExosuitMenu">workbench/exosuitmenu</option>
+            </datalist>
+            <datalist id="pdagroup-ids-list">
+
+            </datalist>
+            <datalist id="pdacategory-ids-list">
+
+            </datalist>
+      </body>
+      <footer>
+            
+      </footer>
+</html>

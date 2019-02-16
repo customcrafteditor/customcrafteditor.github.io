@@ -1,0 +1,490 @@
+---
+---
+#code-output {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+
+#code-input {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+
+#modeselector {
+      background-color: white;
+}
+
+/* BUTTON SECTION */
+.button-section {
+      border-color: black;
+}
+
+.button-section>button {
+      background-color: transparent;
+      color: black;
+}
+
+.button-section>button:hover {
+      background-color: black;
+      color: white;
+}
+
+/*  */
+#editor-recipe-ingredient-list {
+      border-color: black;
+}
+#editor-recipe-linked-list {
+      border-color: black;
+}
+#editor-recipe-unlock-list {
+      border-color: black;
+}
+
+/* INGREDIENT LIST */
+.ingredient-list-id {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.ingredient-list-amount {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.ingredient-list-remove {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.ingredient-list-remove:hover {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.ingredient-list-entry {
+      border-bottom-color: black;
+}
+
+/* LINKED LIST */
+.linked-list-id {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.linked-list-remove {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.linked-list-remove:hover {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.linked-list-entry {
+      border-bottom-color: black;
+}
+
+/* UNLOCK LIST */
+.unlock-list-id {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.unlock-list-remove {
+      border-color: black;
+      background-color: white;
+      color: black;
+}
+.unlock-list-remove:hover {
+      border-color: white;
+      background-color: black;
+      color: white;
+}
+.unlock-list-entry {
+      border-bottom-color: black;
+}
+
+/*  */
+#editor-recipe-citems-list, #editor-customtab-citems-list, #editor-customsize-citems-list, #editor-custombiofuels-citems-list {
+      border-color: black;
+}
+
+.recipe-clist-entry, .customtab-clist-entry, .customsize-clist-entry, .custombiofuels-clist-entry {
+      border-bottom-color: black;
+}
+.recipe-clist-remove {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.recipe-clist-remove:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+.recipe-clist-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-amount {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-displayname {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-tooltip {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-path {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.recipe-clist-ingredients {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-ingredients-add {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-ingredients-add:hover {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-ingredient-entry {
+      border-bottom-color: black;
+}
+.recipe-clist-ingredient-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-ingredient-amount {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-ingredient-remove {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-ingredient-remove:hover {
+      background-color: black;
+      color: white;
+}
+
+.recipe-clist-linked {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-linked-add {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-linked-add:hover {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-linked-entry {
+      border-bottom-color: black;
+}
+.recipe-clist-linked-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-linked-remove {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-linked-remove:hover {
+      background-color: black;
+      color: white;
+}
+
+.recipe-clist-unlock {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-unlock-add {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-unlock-add:hover {
+      background-color: black;
+      color: white;
+      border-color: white;
+}
+.recipe-clist-unlock-entry {
+      border-bottom-color: black;
+}
+.recipe-clist-unlock-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-unlock-remove {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.recipe-clist-unlock-remove:hover {
+      background-color: black;
+      color: white;
+}
+
+/*  */
+.editor-recipe-input {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.editor-recipe-button {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.editor-recipe-button:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-recipe-button-important {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-recipe-button-important:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+
+
+
+.editor-customtab-input {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.editor-customtab-button {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.editor-customtab-button:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-customtab-button-important {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-customtab-button-important:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.customtab-clist-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.customtab-clist-displayname {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.customtab-clist-sprite {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.customtab-clist-parentpath {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.customtab-clist-remove {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.customtab-clist-remove:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+
+
+
+.editor-customsize-input {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.editor-customsize-button {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.editor-customsize-button:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-customsize-button-important {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-customsize-button-important:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.customsize-clist-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.customsize-clist-width {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.customsize-clist-height {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.customsize-clist-remove {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.customsize-clist-remove:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+
+
+
+.editor-custombiofuels-input {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.editor-custombiofuels-button {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.editor-custombiofuels-button:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-custombiofuels-button-important {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.editor-custombiofuels-button-important:hover {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+
+.custombiofuels-clist-id {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+.custombiofuels-clist-fuel {
+      background-color: white;
+      color: black;
+      border-color: black;
+}
+
+.custombiofuels-clist-remove {
+      background-color: white!important;
+      color: black!important;
+      border-color: black!important;
+}
+.custombiofuels-clist-remove:hover {
+      background-color: black!important;
+      color: white!important;
+      border-color: white!important;
+}
+
+.input-labler-label {
+      color: black;
+}
+
+/* SLIDER */
+.slider {
+      background-color: rgb(235,235,235)!important;
+}
+
+.slider:before {
+      background-color: rgb(120,120,120)!important;
+}
+
+input:checked+.slider {
+      background-color: black!important;
+}
+
+input:checked+.slider:before {
+      background-color: white!important;
+}
+
+input:focus+.slider {
+      box-shadow: 0 0 1px black!important;
+}
+
+/*  */
