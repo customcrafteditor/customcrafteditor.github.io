@@ -1,8 +1,14 @@
 ---
+og_title: "CustomCraftEditor Repository"
+og_type: "website"
+og_url: "/github"
+og_description: "The source-code of the CustomCraftEditor. Hosted on GitHub"
 ---
 <html>
 
 <head>
+      {% capture og_url_fin %}{{ site.url }}{{ site.baseurl }}{{ page.og_url }}{% endcapture %}
+      {% include ogp.html title=page.og_title content=page.og_type url=og_url_fin description=page.og_description %}
       <meta http-equiv="refresh" content="1;url=https://github.com/customcrafteditor/customcrafteditor.github.io">
       <script type="text/javascript">
             window.location.href = "https://github.com/customcrafteditor/customcrafteditor.github.io"
